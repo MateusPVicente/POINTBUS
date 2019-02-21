@@ -8,8 +8,8 @@ body {
 
 nav {
     top: 5%;
-    left: 3%;
-    right: 3%;
+    left: 4%;
+    right: 4%;
     padding: 1%;
     position: absolute;
     background-color: white;
@@ -28,4 +28,21 @@ ul li a {
     text-decoration: none;
     color: #d32f2f;
     font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: #2238fd;
+    font-weight: bold;
+}
+ul li:hover {
+    text-decoration: none;
+    border-bottom: 3px solid #2238fd;
+}
+
+.img {
+    position: absolute;
+    width: 20%;
+    top: 10px;
+    left: 10px;
 }
