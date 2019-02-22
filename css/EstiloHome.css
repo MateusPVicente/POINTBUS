@@ -1,9 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    font-size: 20px;
-    background-color: #383838;
+    font-family: ProductSans-Regular;
+    font-size: 22px;
+    background-color: #008f95;
+}
+
+@font-face {
+    font-family: ProductSans-Regular;
+    src: url('ProductSans-Regular.ttf');
 }
 
 nav {
@@ -17,27 +22,28 @@ nav {
     border-radius: 10px;
 }
 
-ul li {
+ul a li {
     position: relative;
     display: inline;
     padding: 2%;
     margin-right: 1%;
 }
 
-ul li a {
+ul a {
     text-decoration: none;
-    color: #d32f2f;
+    color: #008f95;
     font-weight: bold;
 }
 
-ul li a:hover {
+ul a:hover {
     text-decoration: none;
-    color: #2238fd;
+    color: #646464;
     font-weight: bold;
 }
-ul li:hover {
+ul a li:hover {
     text-decoration: none;
-    border-bottom: 3px solid #2238fd;
+    background: #eeeeee;
+    border-bottom: 3px solid #646464;
 }
 
 .img {
