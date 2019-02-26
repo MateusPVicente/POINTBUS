@@ -3,14 +3,14 @@ body {
     padding: 0;
     font-family: ProductSans-Regular;
     font-size: 22px;
-    background-color: #008f95;
+    background-color: #0375b4;
 }
 
 @font-face {
     font-family: ProductSans-Regular;
     src: url('ProductSans-Regular.ttf');
 }
-
+/* ------CABEÇALHO------ */
 nav {
     top: 5%;
     left: 4%;
@@ -29,26 +29,82 @@ ul a li {
     margin-right: 1%;
 }
 
-ul a {
+ul a#h {
     text-decoration: none;
-    color: #008f95;
+    color: #0375b4;
+    font-weight: bold;
+}
+ul a#s {
+    text-decoration: none;
+    color: #007849;
+    font-weight: bold;
+}
+ul a#b {
+    text-decoration: none;
+    color: #ffce00;
+    font-weight: bold;
+}
+ul a#l {
+    text-decoration: none;
+    color: #4717f6;
     font-weight: bold;
 }
 
-ul a:hover {
+ul a#h li:hover {
     text-decoration: none;
-    color: #646464;
     font-weight: bold;
+    color: white;
+    background: #0376b4d0;
+    box-shadow: 0 5px 0 #0375b4;
+    border-radius: 10px;
 }
-ul a li:hover {
+ul a#s li:hover {
     text-decoration: none;
-    background: #eeeeee;
-    border-bottom: 3px solid #646464;
+    font-weight: bold;
+    color: white;
+    background: #007849;
+    box-shadow: 0 5px 0 #006b40;
+    border-radius: 10px;
+}
+ul a#b li:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: #ffce00;
+    box-shadow: 0 5px 0 #d3a500;
+    border-radius: 10px;
+}
+ul a#l li:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: #4717f6;
+    box-shadow: 0 5px 0 #3002e9;
+    border-radius: 10px;
+}
+
+ul a li:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
 }
 
 .img {
     position: absolute;
     width: 20%;
-    top: 10px;
+    top: 14px;
     left: 10px;
+}
+/* --------------------------------- */
+.c1 {
+    background-color: #007849;
+    position: relative;
+    top: 800px;
+    height: 800px;
+}
+.c2 {
+    background-color: #ffce00;
+    position: relative;
+    top: 800px;
+    height: 800px;
 }
