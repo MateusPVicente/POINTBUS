@@ -96,16 +96,3 @@ nav#nav ul a li:active {
     left: 10px;
 }
 /* --------------------------------- */
-.c1 {
-    background-color: #007849;
-    position: relative;
-    top: 800px;
-    height: 800px;
-}
-.c2 {
-    background-color: #ffce00;
-    position: relative;
-    top: 800px;
-    height: 800px;
-}
-/* --------------------------------- */
