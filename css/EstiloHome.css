@@ -1,15 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: ProductSans-Regular;
+    font-family: Berlin Sans FB;
     font-size: 22px;
-    background-color: #0375b4;
+    background-color: transparent;
+    background-image: url(../img/fundo.png);
+    background-size: 100% 65%;
+    background-repeat: no-repeat;
 }
 
-@font-face {
-    font-family: ProductSans-Regular;
-    src: url('ProductSans-Regular.ttf');
-}
 /* ------CABEÇALHO------ */
 nav {
     top: 5%;
@@ -32,27 +31,23 @@ ul a li {
 ul a#h {
     text-decoration: none;
     color: #0375b4;
-    font-weight: bold;
 }
 ul a#s {
     text-decoration: none;
     color: #007849;
-    font-weight: bold;
 }
 ul a#b {
     text-decoration: none;
-    color: #ffce00;
-    font-weight: bold;
+    color: #f3c200;
 }
 ul a#l {
     text-decoration: none;
     color: #4717f6;
-    font-weight: bold;
 }
 
 ul a#h li:hover {
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
     background: #0376b4d0;
     box-shadow: 0 5px 0 #0375b4;
@@ -60,26 +55,26 @@ ul a#h li:hover {
 }
 ul a#s li:hover {
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
     background: #007849;
-    box-shadow: 0 5px 0 #006b40;
+    box-shadow: 0 5px 0 #01633a;
     border-radius: 10px;
 }
 ul a#b li:hover {
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
-    background: #ffce00;
+    background: #f3c200;
     box-shadow: 0 5px 0 #d3a500;
     border-radius: 10px;
 }
 ul a#l li:hover {
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: white;
     background: #4717f6;
-    box-shadow: 0 5px 0 #3002e9;
+    box-shadow: 0 5px 0 #2801d4;
     border-radius: 10px;
 }
 
@@ -92,14 +87,35 @@ nav#nav ul a li:active {
 .img {
     position: absolute;
     width: 20%;
-    top: 14px;
+    top: 8px;
     left: 10px;
+}
+.destino {
+    position: absolute;
+    width: 44%;
+    top: 11em;
+    left: 40em;
+}
+
+.container {
+    margin: 0 auto;
+    width: auto;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+}
+.titulo span {
+    font-weight: 300;
+    display: block;
+    font-size: 1em;
 }
 /* --------------------------------- */
 .c1 {
     background-color: #007849;
     position: relative;
-    top: 800px;
+    top: 820px;
     height: 800px;
 }
 .c2 {
