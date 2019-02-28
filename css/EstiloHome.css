@@ -1,34 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+*{
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    font-family: Berlin Sans FB;
-    font-size: 22px;
+    /* padding: 0; */
+    font-family: 'Berlin Sans FB';
+    text-align: center;
+    /* font-size: 22px;
     background-color: transparent;
     background-image: url(../img/fundo.png);
     background-size: 100% 65%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    width: auto;
+    margin: 0 auto;
+}
+
+/* ------TIPOGRAFIA------ */
+
+#titulo{
+    left: 0;
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.titulo span{
+    font-weight: 300;
+    display: block;
+    font-size: .9em;
+}
+
+@media (min-width:55rem){
+    .titulo{
+        font-size: 3.7rem;
+    }
+}
+
+/* ------BOTOES------ */
+
+.button {
+    display: inline-block;
+    font-size: 1.15rem;
+    text-decoration: none;
+    text-transform: upercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+.button-accent{
+    color: #00ff6c;
+    border-color: #00ff6c;
+}
+
+.button-accent:hover,
+.button-accent:focus{
+    background: #00ff6c;
+    color: #232323;
+}
+
+
 /* ------CABEÇALHO------ */
-nav {
-    top: 5%;
-    left: 4%;
-    right: 4%;
+
+header{
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: 1em;
+}
+
+/* nav {
+    left: 0;
+    right: 0;
     padding: 1%;
     position: absolute;
     background-color: white;
     text-align: right;
-    border-radius: 10px;
+    border-radius: 1rem;
+} */
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-ul a li {
-    position: relative;
-    display: inline;
+nav li {
+    /* position: relative;
+    display: inline-block;
     padding: 2%;
-    margin-right: 1%;
+    margin-right: 1em; */
+    display: inline-block;
+    margin: 1em;
 }
 
-ul a#h {
+nav a{
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: upercase;
+    font-size: 1em;
+    padding: .8em;
+    color: #FFF;
+}
+
+nav a:hover, 
+nav a:focus{
+    color: #DDD;
+}
+
+@media (min-width:60rem){
+    .logo{
+        float: left;
+    }
+
+    nav{
+        float: right;
+    }
+
+    nav a{
+        font-size: 1.2em;
+    }
+}
+
+
+/*---------HOME-HERO--------- */
+.home-hero{
+    background-image: url(../img/fundo.png);
+    background-size: cover;
+    padding: 25em 0;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+/* ul a#h {
     text-decoration: none;
     color: #0375b4;
 }
@@ -45,37 +163,41 @@ ul a#l {
     color: #4717f6;
 }
 
-ul a#h li:hover {
+ul a#h:hover {
     text-decoration: none;
-    /* font-weight: bold; */
+     font-weight: bold; 
     color: white;
     background: #0376b4d0;
     box-shadow: 0 5px 0 #0375b4;
     border-radius: 10px;
+    padding: 1.2em;
 }
-ul a#s li:hover {
+ul a#s:hover {
     text-decoration: none;
-    /* font-weight: bold; */
+     font-weight: bold;
     color: white;
     background: #007849;
     box-shadow: 0 5px 0 #01633a;
     border-radius: 10px;
+    padding: 1.2em;
 }
-ul a#b li:hover {
+ul a#b:hover {
     text-decoration: none;
-    /* font-weight: bold; */
+     font-weight: bold; 
     color: white;
     background: #f3c200;
     box-shadow: 0 5px 0 #d3a500;
     border-radius: 10px;
+    padding: 1.2em;
 }
-ul a#l li:hover {
+ul a#l:hover {
     text-decoration: none;
-    /* font-weight: bold; */
+     font-weight: bold; 
     color: white;
     background: #4717f6;
     box-shadow: 0 5px 0 #2801d4;
     border-radius: 10px;
+    padding: 1.2em;
 }
 
 nav#nav ul a li:active {
@@ -84,19 +206,21 @@ nav#nav ul a li:active {
     box-shadow: none;
 }
 
-.img {
+ .img {
     position: absolute;
     width: 20%;
     top: 8px;
     left: 10px;
-}
-/* --------------------------------- */
+} 
+
+*/
 .destino {
     position: absolute;
     width: 44%;
     top: 28%;
     left: 56%;
 }
+/*
 
 .container {
     position: relative;
@@ -107,17 +231,18 @@ nav#nav ul a li:active {
     color: white;
 }
 
-.titulo {
-    font-size: 3rem;
-    font-weight: 300;
-    margin-bottom: 1.5em;
-}
+
 .titulo span {
-    display: block;
+     display: block;
     font-size: 2.4rem;
-    color: white;
+    color: white; 
+    font-weight: 300;
+    display: block;
+    font-size: .9em;
 }
-/* --------------------------------- */
+
+
+
 .c1 {
     background-color: #007849;
     position: relative;
@@ -130,7 +255,8 @@ nav#nav ul a li:active {
     top: 580px;
     height: 800px;
 }
-/* --------------------------------- */
+
+
 .btn {
     font-family: Berlin Sans FB;
     font-size: 1.5rem;
@@ -153,4 +279,4 @@ nav#nav ul a li:active {
     color: rgb(31, 173, 181);
     transition: 0.2s;
     padding: 15px;
-}
+} */
