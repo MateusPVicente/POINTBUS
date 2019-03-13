@@ -115,11 +115,16 @@ nav a{
     font-size: 1em;
     padding: .8em;
     color: #FFF;
+    transition: .3s;
 }
 
 nav a:hover, 
 nav a:focus{
-    color: #DDD;
+    color: rgb(111, 214, 219);
+    background-color: white;
+    padding: 1em;
+    transition: .3s;
+    border-radius: 10px;
 }
 
 @media (min-width:60rem){
