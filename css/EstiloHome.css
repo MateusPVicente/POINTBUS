@@ -6,20 +6,19 @@
 
 body {
     margin: 0;
-    /* padding: 0; */
     font-family: 'Berlin Sans FB';
     text-align: center;
-    /* font-size: 22px;
-    background-color: transparent;
-    background-image: url(../img/fundo.png);
-    background-size: 100% 65%;
-    background-repeat: no-repeat; */
 }
 
 img{
     max-width: 100%;
     height: auto;
 }
+
+/* hr{
+    float: left;
+     position: relative; 
+} */
 
 .container{
     width: auto;
@@ -29,7 +28,7 @@ img{
 /* ------TIPOGRAFIA------ */
 
 #titulo{
-    left: 0;
+    text-align: left;
 }
 
 .titulo {
@@ -54,26 +53,27 @@ img{
 
 .button {
     display: inline-block;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     text-decoration: none;
     text-transform: upercase;
+    font-weight: 460;
     border-width: 2px;
     border-style: solid;
-    padding: .5em 1.75em;
+    padding: .5em 1.45em;
     transition: .2s;
     border-radius: 10px;
 }
 
 .button-accent{
-    color: rgb(256, 39, 69);
-    border-color: rgb(256, 39, 69);
+    color: rgb(251, 174, 31);
+    border-color: rgb(251, 174, 31);
 }
 
 .button-accent:hover,
 .button-accent:focus{
-    background: rgb(256, 39, 69);
+    background: rgb(251, 174, 31);
     color: #232323;
-    transition: .2s;
+    transition: .3s;
 }
 
 
@@ -86,16 +86,6 @@ header{
     margin: 1em;
 }
 
-/* nav {
-    left: 0;
-    right: 0;
-    padding: 1%;
-    position: absolute;
-    background-color: white;
-    text-align: right;
-    border-radius: 1rem;
-} */
-
 nav ul{
     margin: 0;
     padding: 0;
@@ -103,10 +93,6 @@ nav ul{
 }
 
 nav li {
-    /* position: relative;
-    display: inline-block;
-    padding: 2%;
-    margin-right: 1em; */
     display: inline-block;
     margin: 1em;
 }
@@ -152,6 +138,43 @@ nav a:focus{
     padding: 28em 0;
     background-repeat: no-repeat;
     color: #FFF;
+    left: .2em;
+}
+
+.home-hero .container#t{
+    margin: 5em;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.home-hero .container#i{
+    align-content: center;
+    margin-top: -15em;
+}
+
+.home-hero .container hr{
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background-color: #fff;
+    height: 5px;
+    width: 15%;
+    left: 0;
+}
+
+
+.home-hero .container .button-accent{
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.home-hero .container .button-accent:focus, 
+                      .button-accent:hover{
+    color: #FFF;
+    background-color: rgb(251, 174, 31);
+    transition: .3s;
+    border-radius: 10px;
 }
 
 @media (min-width:55rem){
@@ -159,148 +182,16 @@ nav a:focus{
         width: 46%;
         float: left;
         margin-top: -8em;
+        margin-left: 5em;
     }
 
     .home-hero .container#i{
         width: auto;
         float: right;
-        top: 2em;
+        top: -20em;
+        padding: 2em;
+        align-content: center;
+        margin-top: -15em;
+        margin-right: 5em;
     }
 }
-
-
-
-/* ul a#h {
-    text-decoration: none;
-    color: #0375b4;
-}
-ul a#s {
-    text-decoration: none;
-    color: #007849;
-}
-ul a#b {
-    text-decoration: none;
-    color: #f3c200;
-}
-ul a#l {
-    text-decoration: none;
-    color: #4717f6;
-}
-
-ul a#h:hover {
-    text-decoration: none;
-     font-weight: bold; 
-    color: white;
-    background: #0376b4d0;
-    box-shadow: 0 5px 0 #0375b4;
-    border-radius: 10px;
-    padding: 1.2em;
-}
-ul a#s:hover {
-    text-decoration: none;
-     font-weight: bold;
-    color: white;
-    background: #007849;
-    box-shadow: 0 5px 0 #01633a;
-    border-radius: 10px;
-    padding: 1.2em;
-}
-ul a#b:hover {
-    text-decoration: none;
-     font-weight: bold; 
-    color: white;
-    background: #f3c200;
-    box-shadow: 0 5px 0 #d3a500;
-    border-radius: 10px;
-    padding: 1.2em;
-}
-ul a#l:hover {
-    text-decoration: none;
-     font-weight: bold; 
-    color: white;
-    background: #4717f6;
-    box-shadow: 0 5px 0 #2801d4;
-    border-radius: 10px;
-    padding: 1.2em;
-}
-
-nav#nav ul a li:active {
-    position: relative;
-    top: 5px;
-    box-shadow: none;
-}
-
- .img {
-    position: absolute;
-    width: 20%;
-    top: 8px;
-    left: 10px;
-} 
-
-*/
-.destino {
-    position: absolute;
-    width: 44%;
-    top: 28%;
-    left: 56%;
-}
-/*
-
-.container {
-    position: relative;
-    margin: 0 auto;
-    width: 550px;
-    top: 15em;
-    left: -14em;
-    color: white;
-}
-
-
-.titulo span {
-     display: block;
-    font-size: 2.4rem;
-    color: white; 
-    font-weight: 300;
-    display: block;
-    font-size: .9em;
-}
-
-
-
-.c1 {
-    background-color: #007849;
-    position: relative;
-    top: 580px;
-    height: 800px;
-}
-.c2 {
-    background-color: #ffce00;
-    position: relative;
-    top: 580px;
-    height: 800px;
-}
-
-
-.btn {
-    font-family: Berlin Sans FB;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 3px solid white;
-    background: transparent;
-    color: white;
-    position: relative;
-    left: 25%;
-    top: 0.8em;
-    transition: 0.2s;
-}
-.btn:hover {
-    background: white;
-    color: rgb(31, 173, 181);
-    transition: 0.2s;
-    padding: 15px;
-} */
