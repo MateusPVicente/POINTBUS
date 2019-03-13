@@ -46,7 +46,7 @@ img{
 
 @media (min-width:55rem){
     .titulo{
-        font-size: 3.7rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -60,17 +60,20 @@ img{
     border-width: 2px;
     border-style: solid;
     padding: .5em 1.75em;
+    transition: .2s;
+    border-radius: 10px;
 }
 
 .button-accent{
-    color: #00ff6c;
-    border-color: #00ff6c;
+    color: rgb(256, 39, 69);
+    border-color: rgb(256, 39, 69);
 }
 
 .button-accent:hover,
 .button-accent:focus{
-    background: #00ff6c;
+    background: rgb(256, 39, 69);
     color: #232323;
+    transition: .2s;
 }
 
 
@@ -146,10 +149,26 @@ nav a:focus{
 .home-hero{
     background-image: url(../img/fundo.png);
     background-size: cover;
-    padding: 25em 0;
+    padding: 28em 0;
     background-repeat: no-repeat;
     color: #FFF;
 }
+
+@media (min-width:55rem){
+    .home-hero .container#t{
+        width: 46%;
+        float: left;
+        margin-top: -8em;
+    }
+
+    .home-hero .container#i{
+        width: auto;
+        float: right;
+        top: 2em;
+    }
+}
+
+
 
 /* ul a#h {
     text-decoration: none;
