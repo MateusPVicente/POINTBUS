@@ -106,7 +106,6 @@ nav li {
     margin-right: 1em; */
     display: inline-block;
     margin: 1em;
-    visibility: hidden;
 }
 
 nav a{
@@ -116,16 +115,11 @@ nav a{
     font-size: 1em;
     padding: .8em;
     color: #FFF;
-    transition: .3s;
 }
 
 nav a:hover, 
 nav a:focus{
-    color: rgb(111, 214, 219);
-    background-color: white;
-    padding: 1em;
-    transition: .3s;
-    border-radius: 10px;
+    color: #DDD;
 }
 
 @media (min-width:60rem){
@@ -142,74 +136,7 @@ nav a:focus{
     }
 }
 
-/* ICON */
-.icon {
-    position: absolute;
-    top: 2.5em;
-    right: 0;
-    transform: translate(-50%, -50%);
-    width: 3.5em;
-    height: 3.5em;
-    cursor: pointer;
-    visibility: initial;
-}
 
-.icon.active .hamburguer::before {
-    top: 0;
-    transform: rotate(45deg);
-}
-
-.icon.active .hamburguer::after {
-    top: 0;
-    transform: rotate(135deg);
-}
-
-.hamburguer{
-    width: 40px;
-    height: 5px;
-    background: white;
-    position: absolute;
-    top: 55%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    transition: .5s;
-    border-radius: 50px;
-}
-
-.icon.active .hamburguer{
-    background-color: transparent;
-}
-
-.hamburguer::before,
-.hamburguer::after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 5px;
-    background: white;
-    left: 0;
-    transition: .5s;
-    margin: 0 auto;
-    border-radius: 50px;
-}
-
-.hamburguer::before {
-    top: -13px;
-}
-
-.hamburguer::after {
-    top: 13px;
-}
-
-@media (min-width:40rem){
-    nav li{
-        visibility: initial;
-    }
-
-    .icon{
-        visibility: hidden;
-    }
-}
 /*---------HOME-HERO--------- */
 .home-hero{
     background-image: url(../img/fundo.png);
