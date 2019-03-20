@@ -32,19 +32,22 @@ hr{
 }
 
 .titulo {
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     margin-bottom: 1em;
     font-weight: 500;
 }
 
 .titulo span hr{
+    visibility: initial;
     display: block;
     margin-top: 1.1em;
     border-bottom: 1px solid #fff;
     color: #fff;
     background-color: #fff;
     height: 5px;
-    width: 10%;
+    width: 1.8em;
+    position: relative;
+    left: 44%;
 }
 
 .subtitulo{
@@ -63,6 +66,18 @@ hr{
 
 @media(min-width: 25rem){
     .titulo{
+        font-size: 2.3em;
+        text-align: center;
+    }
+
+    .titulo span{
+        font-size: .7em;
+        text-align: center;
+    }
+}
+
+@media(min-width: 40.6rem){
+    .titulo{
         font-size: 2.8em;
         text-align: left;
     }
@@ -70,6 +85,10 @@ hr{
     .titulo span{
         font-size: .9em;
         text-align: left;
+    }
+
+    .titulo span hr{
+        left: 0;
     }
 }
 
@@ -157,6 +176,7 @@ nav a:focus{
 
 
 /*---------HOME-HERO--------- */
+
 .home-hero{
     background-image: url(../img/fundo.png);
     background-size: cover;
@@ -164,6 +184,7 @@ nav a:focus{
     background-repeat: no-repeat;
     color: #FFF;
     left: .2em;
+    height: auto;
 }
 
 .home-hero .container#t{
@@ -171,9 +192,10 @@ nav a:focus{
     text-align: center;
 }
 
-@media(min-width: 25rem){
+@media(min-width: 33rem){
     .home-hero .container#t{
         margin: 8em;
+        text-align: center;
     }
 }
 
@@ -211,7 +233,7 @@ nav a:focus{
         padding: 0;
     }
 
-    .home-hero .container#i{
+    .container#i{
         float: right;
         padding: 2em;
         align-content: center;
@@ -223,3 +245,21 @@ nav a:focus{
 }
 
 
+/*---------DESCRIÇÃO--------- */
+
+.aplicativo{
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-color: #000000;
+}
+
+.aplicativo .container#i{
+    float: right;
+    padding: 2em;
+    align-content: center;
+    margin-top: 2em;
+    margin-right: 1.3em;
+    position: relative;
+    width: auto;
+}
