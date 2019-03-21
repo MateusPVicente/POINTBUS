@@ -252,14 +252,61 @@ nav a:focus{
     width: 100%;
     position: relative;
     background-color: #000000;
+    height: 500px;
 }
 
-.aplicativo .container#i{
-    float: right;
-    padding: 2em;
-    align-content: center;
-    margin-top: 2em;
-    margin-right: 1.3em;
+.aplicativo .container{
+    height: 500px;
+}
+
+/*---------ESTRADA--------- */
+
+.busStreet{
+    padding-top: 10em;
+    background-image: url(../img/fundoEstrada.png);
+    animation: street 15s linear infinite;
+}
+
+.busStreet .bus{
     position: relative;
-    width: auto;
+    top: 6em;
+    height: 369px;
+    width: 100%;
+    margin-bottom: 0;
+    animation: bus 1.4s linear infinite;
+    background-image: url(../img/onibusEstrada.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+.busStreet .street{
+    position: relative;
+    width: 100%;
+    height: 137px; 
+    background-image: url(../img/estrada.png);
+    animation: street 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes street{
+    0%{
+        background-position: 2077px;
+    }
+    100%{
+        background-position: 0px;
+    }
+}
+
+ @keyframes bus{
+    0%{
+        background-position-y: 40px;
+    }
+    50%{
+        background-position-y: 65px;
+    }
+    100%{
+        background-position-y: 40px;
+    }
 }
