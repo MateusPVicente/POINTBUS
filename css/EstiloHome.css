@@ -263,22 +263,3 @@ nav a:focus{
     position: relative;
     width: auto;
 }
-
-/*---------ESTRADA--------- */
-
-.busStreet .street{
-    position: relative;
-    width: 100%;
-    height: 224px; 
-    background-image: url(../img/estrada.png);
-    animation: street 8s linear infinite;
-}
-
-@keyframes street{
-    0%{
-        background-position: 0;
-    }
-    100%{
-        background-position: 2780px;
-    }
-}
