@@ -22,6 +22,8 @@ nav{
     border-style: none;
 }
 
+.orangeIcon {color:#d32f2f;}
+
 imagemFundo{
     z-index: 0;
 }
@@ -45,8 +47,8 @@ hr{
 }
 
 #info{
-    padding-top: 5em;
-    padding-bottom: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 #passoApasso{
@@ -55,5 +57,5 @@ hr{
 }
 
 #passes{
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
