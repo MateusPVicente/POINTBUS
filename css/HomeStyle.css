@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+body {
+    margin: 0;
+    font-family: 'Berlin Sans FB';
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.home-hero{
+    /* background-image: url(../img/fundo.png); */
+    /* background-size: cover;
+    padding: 10em 0;
+    padding-bottom: 2em;
+    /* background-repeat: no-repeat; */
+    color: #FFF;
+    left: .2em;
+    height: 90%; */
+}
+
+.home-hero .container#t{
+    margin: 6em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.home-hero .container#i{
+    align-content: center;
+    margin-top: -15em;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.destinos{
+    padding: 1.2rem;
+}
+
+.home-hero .container .button-accent{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.home-hero .container .button-accent:focus, 
+                      .button-accent:hover{
+    color: #FFF;
+    background-color: rgb(251, 174, 31);
+    transition: .3s;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------- */
+
+#titulo{
+    left:0;
+}
+
+.titulo {
+    font-size: 3rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.titulo span hr{
+    visibility: initial;
+    display: block;
+    margin-top: 1.1em;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background-color: #fff;
+    height: 5px;
+    width: 1.8em;
+    position: relative;
+    left: 44%;
+}
+
+.subtitulo{
+    font-weight: 300;
+    display: block;
+    font-size: .75em;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+
+/* ----------------------------------------------- */
+
+/* nav{
+    margin-bottom: 10em; 
+} */
+
+header{
+    padding: 2em;
+    /* position: absolute;
+    top:6em; */
+    background-image: url(../img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em 0;
+    padding-bottom: 2em;
+    /* background-repeat: no-repeat; */
+    color: #FFF;
+    left: .2em;
+    height: 90%;
+}

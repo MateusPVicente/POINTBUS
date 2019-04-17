@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+html{
+    font-family: 'Berlin Sans FB';
+    font-size: 1.2rem;
+}
+
+p{
+    font-weight: 300;
+}
+
+head{
+    background-image: url("img/fundo.png");
+}
+
+nav{
+    position: absolute;
+    top: 2em;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-style: none;
+}
+
+imagemFundo{
+    z-index: 0;
+}
+
+#coisas{
+    z-index: 2;
+    position: absolute;
+    top: 10em;
+    left:0;
+    right: 0;
+}
+
+#discricao{
+    margin-top: 7em;
+}
+
+hr{
+    height: .15rem;
+    background-color: white;
+    border-radius: 3rem;
+}
+
+#info{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+#passoApasso{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+#passes{
+    margin-bottom: 2em;
+}
