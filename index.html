@@ -31,19 +31,19 @@
           <a href="index.html" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="sass.html">HOME</a></li>
+            <li><a href="badges.html">PRA ONDE VAI?</a></li>
+            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
           </ul>
         </div>
       </nav>
 
       <ul class="sidenav" id="mobile-demo">
-            <li><a href=".html">Sass</a></li>
-            <li><a href=".html">Components</a></li>
-            <li><a href=".html">Javascript</a></li>
-            <li><a href=".html">Mobile</a></li>
+            <li><a href=".html">HOME</a></li>
+            <li><a href=".html">PRA ONDE VAI?</a></li>
+            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
           </ul>
 
     <img id="imagemFundo" src="img/fundo.png">
@@ -130,6 +130,31 @@
                     </div>
             </div>
         </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 class="center-align">LOGIN</h4>
+                <form id="f">
+            
+                <tr>
+                    <td><input type="text" id="usu" class="input1" required placeholder=" E-mail"></td>   
+                </tr>
+                <tr>
+                    <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
+                </tr>
+          
+                <br><br>
+                <input type="submit" id="btnEntrar" class="waves-effect waves-light btn " value="Entrar">
+          
+                <br><br>
+                <h6>Não possui uma conta? Cadastre-se agora!</h6>
+
+                <br>
+                <a href="Cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+          
+                </form>
+            </div>
+        </div>
     </body>
-    
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </html>
