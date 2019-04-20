@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 
+
 html{
     font-family: 'Berlin Sans FB';
     font-size: 1.1rem;
@@ -9,23 +10,24 @@ p{
     font-weight: 300;
 }
 
-head{
-    background-image: url("img/fundo.png");
-}
 
-nav{
+#menu{
     position: absolute;
     top: 2em;
+    width: 90%;
     left: 0;
     right: 0;
     z-index: 1;
     border-style: none;
+    border-radius: .5em;
 }
 
-.orangeIcon {color:#d32f2f;}
+.orangeIcon {color:#006064;}
 
-imagemFundo{
+#imagemFundo{
     z-index: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #coisas{
@@ -47,15 +49,23 @@ hr{
 }
 
 #info{
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 0;
 }
 
 #passoApasso{
     padding-top: 5em;
     padding-bottom: 5em;
+    margin: 0;
 }
+/* 
+#onibus{
+    margin-top: 2.5em;
+} */
 
-#passes{
-    margin-bottom: 3em;
-}
+/* #cel{
+    margin-bottom: 2.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+} */

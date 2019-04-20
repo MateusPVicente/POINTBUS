@@ -26,7 +26,7 @@
 
     <body>        
                 
-    <nav class="transparent container">
+    <nav class="transparent container" id="menu">
         <div class="nav-wrapper container">
           <a href="index.html" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -64,68 +64,85 @@
             </div>
         </div>
 
-        <div class="row flow-text" id="info">
-                
-                    <div class="col l6 m6 s12 container">
-                            <div class="container">
-                        <img src="img/onibus.png" alt="destinos" class="responsive-img">
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <div class="container">
+                    <img src="img/poluicao.png" alt="poluicao">
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="container blue">
+                    
+                </div>
+            </div>
+            <div class="col s12 m4 l4">
+                <div class="container">
+                    <img src="img/mundoLindo.png" alt="mundoLindo">
+                </div>
+            </div>
+        </div>
+
+        <div class="row flow-text white-text amber" id="info">
+                    <div class="col l6 m12 s12 container">
+                            <div class="container center" id="onibus">
+                        <img src="img/iconeLampada.png" alt="destinos" class="responsive-img">
                     </div>  
                     </div>
-                    <div class="col l6 m6 s12">
-                        <div class="container">
+                    <div class="col l6 m12 s12">
+                        <!-- <div class="container responsive-text"> -->
                             <p><h4>Vantagens do uso de ônibus: </h4></p>
                             
                             <p>
                                     <h6>
-                                <i class="material-icons tiny orangeIcon">directions</i>
+                                <i class="material-icons tiny orangeIcon">radio_button_checked
+                                        </i>
                                 
                                     Ajuda na diminuição a poliução urbana;
                                 </h6>
                             </p>
                             <p>
                                     <h6>
-                                <i class="material-icons tiny orangeIcon">directions</i> Reduz a probabilidade de acidentes de trânsito;
+                                <i class="material-icons tiny orangeIcon">radio_button_checked</i> Reduz a probabilidade de acidentes de trânsito;
                                 </h6>
                             </p>
     
                             <p>
                                 <h6>
-                                 <i class="material-icons tiny orangeIcon">directions</i> Menor ocupação do espaço urbano;
+                                 <i class="material-icons tiny orangeIcon">radio_button_checked</i> Menor ocupação do espaço urbano;
                                 </h6>
                             </p>
     
                             <p>
                                 <h6>
-                                <i class="material-icons tiny orangeIcon">directions</i>
+                                <i class="material-icons tiny orangeIcon">radio_button_checked</i>
                                 
                                     Maior economia;
                                 </h6>
                             </p>
                             <p>
                                 <h6>
-                                <i class="material-icons tiny orangeIcon">directions</i>
+                                <i class="material-icons tiny orangeIcon">radio_button_checked</i>
                                 
                                     Facilita a mobilidade no trânsito;
                                 </h6>
                             </p>
                             <p>
                                 <h6>
-                                <i class="material-icons tiny orangeIcon">directions</i>
+                                <i class="material-icons tiny orangeIcon">radio_button_checked</i>
                                 
                                     Maior conhecimento do espaço público
                                 </h6>
                             </p>
                     </div>
-                        </div>
+                        <!-- </div> -->
                         
                       
             </div>
 
         <div class="row blue-grey lighten-5" id="passoApasso">
-            <div class="container">
                 <div class="col l4 m4 s12">
-                        <div class="container">
-                        <img src="img/celular.png" alt="destinos" class="responsive-img">
+                        <div class="container center">
+                        <img src="img/celular.png" alt="celular" class="responsive-img" id="cel">
                         </div>
                         
                         <p>
@@ -136,15 +153,11 @@
                         </p>
                 </div>
                 <div class="col l4 m4 s12">
-                    <div class="container">
-                            <div class="container">
-                                    <div class="container">
-                    <img src="img/iconeLocation.png" alt="destinos" class="responsive-img">
+                    <div class="container center">
+                    <img src="img/iconeLocation.png" alt="iconeLocation" class="responsive-img">
                     </div>
-                    </div>
-                </div>
                     <p>
-                            <h5 class="center">Escolha o destino</h5>
+                        <h5 class="center">Escolha o destino</h5>
                         </p>
                         <p>
                             <h6>Com o destino escolhido, escolheremos a maneira masi rápida de chegar a ele.</h6>
@@ -152,12 +165,9 @@
                 </div>
 
                 <div class="col l4 m4 s12">
-                        <div class="container">
-                                <div class="container"><div class="container">
-                        <img src="img/passes.png" alt="destinos" class="responsive-img" id="passes">
-                        </div></div>
+                        <div class="container center">
+                        <img src="img/passes.png" alt="passes" class="responsive-img" >
                         </div>
-                    </div>
                         <p>
                                 <h5 class="center">Boa Viagem!</h5>
                             </p>
@@ -165,32 +175,59 @@
                                 <h6>Não esqueça seu passe para viajar em segurança para onde quiser.</h6>
                             </p>
                     </div>
-            </div>
         </div>
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4 class="center-align">LOGIN</h4>
-                <form id="f">
-            
-                <tr>
-                    <td><input type="text" id="usu" class="input1" required placeholder=" E-mail"></td>   
-                </tr>
-                <tr>
-                    <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
-                </tr>
-          
-                <br><br>
-                <input type="submit" id="btnEntrar" class="waves-effect waves-light btn " value="Entrar">
-          
-                <br><br>
-                <h6>Não possui uma conta? Cadastre-se agora!</h6>
 
-                <br>
-                <a href="Cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
-          
-                </form>
+        <footer class="page-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col l6 s12">
+                      <h5 class="white-text">Já decidiu pra onde vai?</h5>
+                      <p class="grey-text text-lighten-4">Você pode selecionar seu destino e ainda economizar tempo e dinheiro com uma viagem de ônibus.</p>
+                      <p class="grey-text text-lighten-4">Além disso, você diminui significativamente a poluição diária emitida no planeta.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h5 class="white-text">Links</h5>
+                      <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright">
+                  <div class="container">
+                  © 2019 Copyright Text
+                  <a class="grey-text text-lighten-4 right" href="#!">Sobre</a>
+                  </div>
+                </div>
+              </footer>
+
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4 class="center-align">LOGIN</h4>
+                    <form id="f">
+                
+                    <tr>
+                        <td><input type="text" id="usu" class="input1" required placeholder="E-mail"></td>   
+                    </tr>
+                    <tr>
+                        <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
+                    </tr>
+              
+                    <br><br>
+                    <input type="submit" id="btnEntrar" class="waves-effect waves-light btn" value="Entrar">
+              
+                    <br><br>
+                    <h6>Não possui uma conta? Cadastre-se agora!</h6>
+    
+                    <br>
+                    <a href="Cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+              
+                    </form>
+                </div>
             </div>
-        </div>
     </body>
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
