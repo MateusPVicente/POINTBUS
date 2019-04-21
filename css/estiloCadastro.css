@@ -1,12 +1,26 @@
 body{
     margin: 2em;
+    font-family: 'Berlin Sans FB';
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+p{
+    font-weight: 300;
 }
 
 #menu{
-    margin-bottom: 2em;
+    border-style: none;
+    border-radius: .5em;
+    margin-bottom: 2.5em;
 }
 
 #formulario{
-    padding: 1.5em;
-    /* margin: 3em; */
+    padding: 1.3em;
+    border-radius: 3em;
+    /* border-style: outset; */
+}
+
+#cad{
+    margin-top: 2em;
 }
