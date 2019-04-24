@@ -22,8 +22,6 @@ p{
     border-radius: .5em;
 }
 
-.orangeIcon {color:#FFFFFF;}
-
 #imagemFundo{
     z-index: 0;
     width: 100%;
@@ -35,13 +33,13 @@ p{
 } */
 
 #txt{
-    padding-top: 1.5em;
+    padding-top: 5.5em;
 }
 
 #coisas{
     z-index: 2;
     position: absolute;
-    top: 10em;
+    top: 12.5em;
     left:0;
     right: 0;
     margin-bottom: 0;
