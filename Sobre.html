@@ -1,25 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-    <link type="text/css" rel="stylesheet" href="css/EstiloSobre.css"/>
+      <!-- Impotando o novo css -->
+      <link type="text/css" rel="stylesheet" href="css/estiloCadastro.css"  media="screen,projection"/>
 
-    <title>POINTBUS - SOBRE</title>
-</head>
-<body>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+          <!-- adicionando javascript e jquery -->
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
-    <nav id="nav">
-        <a href=""><img class="img" src="./img/logo.png"></img></a>
-        <ul>
-            <a href="Home.html" id="h"><li>HOME</li></a>
-            <a href="#" id="s"><li>SOBRE</li></a>
-            <a href="#" id="b"><li>BASTIDORES</li></a>
-            <a href="#" id="l"><li>LOGIN</li></a>
-        </ul>
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/menu.js"></script>
+
+    <title>Sobre Nós</title>
+    </head>
+
+    <!-- Adicionando os incones -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <body class="cyan lighten-4">        
+                
+    <nav class="cyan  z-depth-3" id="menu">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="badges.html">PRA ONDE VAI?</a></li>
+            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a class="waves-effect waves-light cyan darken-3 btn modal-trigger" href="#modal1">LOGIN</a></li>
+          </ul>
+        </div>
     </nav>
 
-</body>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href=".html">PRA ONDE VAI?</a></li>
+        <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+    </ul>
+
+    <div class="row ">
+
+    <div class="col l1"></div>
+
+    <div class="card large col l4 m12 s12">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/mapa.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Desenvolvedores<i class="material-icons right">more_vert</i></span>
+          <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Este projeto foi desenvolvido por dois estudantes do Colégio Tecnico de Campinas (COTUCA), Amabile Ferreira Pietrobon e Mateus de Padua Vicente.</p>
+        </div>
+      </div>
+
+      <div class="col l2"></div>
+
+      <div class="card large col l4 m12 s12">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="img/rua.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+          <p><a href="#">This is a link</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+      </div>
+
+      <div class="col l1"></div>
+
+    </div>
+
+    </body>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </html>
