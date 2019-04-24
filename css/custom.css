@@ -25,12 +25,13 @@ p{
 #imagemFundo{
     z-index: 0;
     width: 100%;
-    height: 105%;
+    height: 100%;
 }
 
-/* .todo{
-    width: 100%;   
-} */
+.todo{
+    padding-top: 2em;
+    padding-bottom: 2em;   
+}
 
 #txt{
     padding-top: 5.5em;
@@ -39,7 +40,7 @@ p{
 #coisas{
     z-index: 2;
     position: absolute;
-    top: 12.5em;
+    top: 12em;
     left:0;
     right: 0;
     margin-bottom: 0;
