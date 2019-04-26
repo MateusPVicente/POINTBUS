@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Molde.master.cs" Inherits="POINTBUS.Molde" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>POINTBUS</title>
+    <link type="text/css" rel="stylesheet" href="Content/materialize.css" />
+    <link type="text/css" rel="stylesheet" href="Content/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="Content/custom.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="Scripts/materialize.js"></script>
+    <script src="Scripts/modal.js"></script>
+    <script src="Scripts/menu.js"></script>
+    <script src="Scripts/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="transparent container" id="menu">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">HOME</a></li>
+            <li><a href="badges.html">PRA ONDE VAI?</a></li>
+            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">HOME</a></li>
+            <li><a href=".html">PRA ONDE VAI?</a></li>
+            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+          </ul>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer class="page-footer cyan darken-3 accent-4">
+                <div class="container">
+                  <div class="row">
+                    <div class="col l6 s12">
+                      <h5 class="white-text">Já decidiu pra onde vai?</h5>
+                      <p class="grey-text text-lighten-4">Você pode selecionar seu destino e ainda economizar tempo e dinheiro com uma viagem de ônibus.</p>
+                      <p class="grey-text text-lighten-4">Além disso, você diminui significativamente a poluição diária emitida no planeta.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h5 class="white-text">Acesse</h5>
+                      <ul>
+                        <li><a class="grey-text text-lighten-3" href="Cadastro.html">Cadastre-se</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
+                        <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright">
+                  <div class="container">
+                  © 2019 Copyright Text
+                  <a class="grey-text text-lighten-4 right" href="Sobre.html">Sobre</a>
+                  </div>
+                </div>
+              </footer>
+        <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4 class="center-align">LOGIN</h4>
+                    <form id="f">
+                
+                    <tr>
+                        <td><input type="text" id="usu" class="input1" required placeholder="E-mail"></td>   
+                    </tr>
+                    <tr>
+                        <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>   
+                    </tr>
+              
+                    <br><br>
+                    <input type="submit" id="btnEntrar" class="waves-effect waves-light btn" value="Entrar">
+              
+                    <br><br>
+                    <h6>Não possui uma conta? Cadastre-se agora!</h6>
+    
+                    <br>
+                    <a href="Cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+              
+                    </form>
+                </div>
+            </div>
+    </form>
+</body>
+</html>

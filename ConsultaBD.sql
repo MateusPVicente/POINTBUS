@@ -1,5 +1,5 @@
 create table Usuario(
-codigo int primary key identity,
+ID int primary key identity,
 nome varchar(50) not null,
 email varchar(40) not null,
 senha varchar(30) not null,

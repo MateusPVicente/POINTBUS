@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container z-depth-1" id="formulario">
+    <div class="container">
+        <h3 id="lbCad" class="center text-darken-2">CADASTRO</h3>
+    </div>
+
+    <form id="form" class="col s12" action="Usuario/Adicionar" method="post">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input name="user.Nome" id="usuario" id="icon_prefix" type="text" class="validate" required>
+                <label id="lb" for="icon_prefix">Nome</label>
+                <span class="helper-text">*Nome completo</span>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input name="user.Email" id="usuario" id="icon_prefix" type="text" class="validate" required>
+                <label id="lb" for="icon_prefix">E-mail</label>
+                <span class="helper-text">Ex: email@gmail.com</span>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">enhanced_encryption</i>
+                <input name="user.Senha" id="senha" id="icon_telephone" type="password" class="validate" required>
+                <label id="lb" for="icon_telephone">Senha</label>
+                <span class="helper-text">*Não fale sua senha para ninguém!</span>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">grade</i>
+                <input id="confSenha" id="icon_telephone" type="password" class="validate" required>
+                <label id="lb2" for="icon_telephone">Confirmar Senha</label>
+            </div>
+
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment_ind</i>
+                <input name="user.DataDeNascimento" id="data" type="text" class="validate" required pattern="[0-3][1-9]/[0-1][0-9]/[0-2][0-9][0-9][0-9]">
+                <label id="lb" for="data">Data de Nascimento</label>
+                <span class="helper-text">*Formatação: dd/mm/aaaa</span>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">home</i>
+                <input name="user.CEPcasa" id="senha" id="icon_telephone" type="password" class="validate" required>
+                <label id="lb" for="icon_telephone">CEP da residência</label>
+                <span class="helper-text">Ex: 12345-678</span>
+            </div>
+
+            <div class="input-field col s6">
+                <i class="material-icons prefix">work</i>
+                <input name="user.CEPtrabalho" id="senha" id="icon_telephone" type="password" class="validate" required>
+                <label id="lb" for="icon_telephone">CEP do trabalho/escola</label>
+                <span class="helper-text">*opcional</span>
+            </div>
+
+            <div class="center-align"><a id="cad" class="container cyan darken-3 waves-effect waves-light btn-large" name="submit">CRIAR CONTA<i class="material-icons right">send</i></a></div>
+
+        </div>
+    </form>
+</div>
+
