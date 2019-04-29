@@ -29,7 +29,7 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="#">HOME</a></li>
             <li><a href="badges.html">PRA ONDE VAI?</a></li>
-            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a href="Usuario/Cadastro">CADASTRE-SE</a></li>
             <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
           </ul>
         </div>
@@ -91,7 +91,7 @@
                     <h6>Não possui uma conta? Cadastre-se agora!</h6>
     
                     <br>
-                    <a href="Cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
+                    <a href="~/Usuario/Cadastro" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
               
                     </form>
                 </div>
