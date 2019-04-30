@@ -27,12 +27,12 @@ namespace POINTBUS.DAO
             }
         }
 
-        public Usuario BuscaPorNome(string nome)
+        public Usuario Busca(string nome, string senha)
         {
             using (var contexto = new OnibusContext())
             {
                 return contexto.Usuario
-                .Where(p => p.Nome == nome)
+                .Where(p => p.Nome == nome && p.Senha == senha)
                 .FirstOrDefault();
             }
         }

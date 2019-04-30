@@ -16,7 +16,7 @@ namespace POINTBUS.Controllers
             return View();
         }
 
-        // GET: Usuario
+        // GET: Home
         public ActionResult Index()
         {
             return View();
@@ -28,6 +28,16 @@ namespace POINTBUS.Controllers
             UsuarioDAO dao = new UsuarioDAO();
             dao.Adiciona(user);
             return RedirectToAction("Index", "Usuario");
+        }
+
+        public ActionResult Logar(string email, string senha)
+        {
+            UsuarioDAO dao = new UsuarioDAO();
+            Usuario user = dao.Busca(email, senha);
+            if (user == null)
+                return RedirectToAction("Home");
+            else
+                return RedirectToAction("Index", "Usuario");
         }
     }
 }
