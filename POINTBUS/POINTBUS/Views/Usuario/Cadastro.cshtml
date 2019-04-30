@@ -9,7 +9,7 @@
         <h3 id="lbCad" class="center text-darken-2">CADASTRO</h3>
     </div>
 
-    <form id="form" class="col s12" action="Usuario/Adicionar" method="post">
+    <form id="form" class="col s12" action="/Usuario/Adicionar" method="post">
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
@@ -40,26 +40,26 @@
 
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment_ind</i>
-                <input name="user.DataDeNascimento" id="data" type="text" class="validate" required pattern="[0-3][1-9]/[0-1][0-9]/[0-2][0-9][0-9][0-9]">
+                <input name="user.DataNascimento" id="data" type="text" class="validate" required pattern="[0-3][1-9]/[0-1][0-9]/[0-2][0-9][0-9][0-9]">
                 <label id="lb" for="data">Data de Nascimento</label>
                 <span class="helper-text">*Formatação: dd/mm/aaaa</span>
             </div>
 
             <div class="input-field col s6">
                 <i class="material-icons prefix">home</i>
-                <input name="user.CEPcasa" id="senha" id="icon_telephone" type="password" class="validate" required>
+                <input name="user.CEPcasa" id="cepCasa" id="icon_telephone" type="text" class="validate" required>
                 <label id="lb" for="icon_telephone">CEP da residência</label>
                 <span class="helper-text">Ex: 12345-678</span>
             </div>
 
             <div class="input-field col s6">
                 <i class="material-icons prefix">work</i>
-                <input name="user.CEPtrabalho" id="senha" id="icon_telephone" type="password" class="validate" required>
+                <input name="user.CEPtrabalho" id="cepTrabalho" id="icon_telephone" type="text" class="validate" required>
                 <label id="lb" for="icon_telephone">CEP do trabalho/escola</label>
                 <span class="helper-text">*opcional</span>
             </div>
 
-            <div class="center-align"><a id="cad" class="container cyan darken-3 waves-effect waves-light btn-large" name="submit">CRIAR CONTA<i class="material-icons right">send</i></a></div>
+            <input id="cad" value="CRIAR CONTA" type="submit" class="container cyan darken-3 waves-effect waves-light btn-large" />
 
         </div>
     </form>

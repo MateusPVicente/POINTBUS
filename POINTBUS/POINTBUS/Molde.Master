@@ -11,11 +11,6 @@
     <link type="text/css" rel="stylesheet" href="Content/custom.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="Scripts/materialize.js"></script>
-    <script src="Scripts/modal.js"></script>
-    <script src="Scripts/menu.js"></script>
-    <script src="Scripts/materialize.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>
@@ -26,7 +21,7 @@
         <div class="nav-wrapper container">
           <a href="index.html" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#">HOME</a></li>
             <li><a href="badges.html">PRA ONDE VAI?</a></li>
             <li><a href="Usuario/Cadastro">CADASTRE-SE</a></li>
@@ -38,7 +33,7 @@
       <ul class="sidenav" id="mobile-demo">
             <li><a href="#">HOME</a></li>
             <li><a href=".html">PRA ONDE VAI?</a></li>
-            <li><a href="Cadastro.html">CADASTRE-SE</a></li>
+            <li><a href="Usuario/Cadastro">CADASTRE-SE</a></li>
             <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
           </ul>
         <div>
@@ -72,7 +67,7 @@
                   </div>
                 </div>
               </footer>
-        <div id="modal1" class="modal">
+            <div id="modal1" class="modal">
                 <div class="modal-content">
                     <h4 class="center-align">LOGIN</h4>
                     <form id="f">
@@ -98,4 +93,12 @@
             </div>
     </form>
 </body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
+<script src="Scripts/materialize.js"></script>
+<script src="Scripts/materialize.min.js"></script>
+
+<script src="Scripts/modal.js"></script>
+<script src="Scripts/menu.js"></script>
+
 </html>

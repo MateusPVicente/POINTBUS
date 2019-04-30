@@ -313,6 +313,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Views\Usuario\Cadastro.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

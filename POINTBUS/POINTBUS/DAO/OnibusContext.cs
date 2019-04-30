@@ -12,7 +12,7 @@ namespace POINTBUS.DAO
         public DbSet<Usuario> Usuario { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=regulus;Initial Catalog=PR118186;User ID=PR118186;Password=PR118186");
+            optionsBuilder.UseSqlServer("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118186;User ID=PR118186;Password=PR118186");
         }
     }
 }

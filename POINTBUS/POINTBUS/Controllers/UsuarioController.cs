@@ -16,11 +16,18 @@ namespace POINTBUS.Controllers
             return View();
         }
 
+        // GET: Usuario
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Adicionar(Usuario user)
         {
             UsuarioDAO dao = new UsuarioDAO();
             dao.Adiciona(user);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Usuario");
         }
     }
 }

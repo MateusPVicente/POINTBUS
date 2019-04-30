@@ -20,7 +20,6 @@
             </div>
         </div>
 
-
             <div class="row poluicao todo white-text " id="corPoluicao">
                 <div class="col s12 m12 l6" id="corPoluicao">
                     <div class="container">
@@ -148,5 +147,5 @@
                                 <h6>Não esqueça seu passe para viajar em segurança para onde quiser.</h6>
                             </p>
                     </div>
-        </div>   
+        </div>
 </asp:Content>
