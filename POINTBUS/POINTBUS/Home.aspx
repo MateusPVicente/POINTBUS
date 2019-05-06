@@ -162,29 +162,31 @@
 
             var chart = new CanvasJS.Chart("chartContainer", {
                 title: {
-                    text: "Erros mais frequentes!"
+                    text: "Erros mais frequentes"
                 },
                 axisY: {
                     title: "Numero de erros",
-                    lineColor: "#4F81BC",
-                    tickColor: "#4F81BC",
-                    labelFontColor: "#4F81BC"
+                    lineColor: " #ff9800",
+                    tickColor: " #ff9800",
+                    labelFontColor: " #ff9800"
                 },
                 axisY2: {
                     title: "Porcentagem",
                     suffix: "%",
-                    lineColor: "#C0504E",
-                    tickColor: "#C0504E",
-                    labelFontColor: "#C0504E"
+                    lineColor: "#ad1457",
+                    tickColor: "#ad1457 ",
+                    labelFontColor: "#ad1457"
                 },
                 data: [{
                     type: "column",
+                    color: "#ff9800",
                     dataPoints: [
-                        { label: "Causa 1", y: 20 },
-                        { label: "Causa 2", y: 15 },
-                        { label: "Causa 3", y: 13 },
-                        { label: "Causa 4", y: 7 },
-                        { label: "Causa 5", y: 2 },
+                        { label: "Lógica", y: 15 },
+                        { label: "Conexão com o banco", y: 23 },
+                        { label: "Implementação", y: 5 },
+                        { label: "Redirecionamento", y: 35 },
+                        { label: "Dados Tuncados", y: 5 },
+                        { label: "Conversão de linguagem", y: 8 },
                     ]
                 }]
             });
@@ -195,16 +197,17 @@
                 var dps = [];
                 var yValue, yTotal = 0, yPercent = 0;
 
-                for (var i = 0; i < chart.data[0].dataPoints.length; i++)
+                for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
                     yTotal += chart.data[0].dataPoints[i].y;
+                }
 
                 for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
                     yValue = chart.data[0].dataPoints[i].y;
                     yPercent += (yValue / yTotal * 100);
-                    dps.push({ label: chart.data[0].dataPoints[i].label, y: yPercent });
+                    dps.push({ label: chart.data[0].dataPoints[i].label, color: "#ad1457", y: yPercent });
                 }
 
-                chart.addTo("data", { type: "line", yValueFormatString: "0.##\"%\"", dataPoints: dps });
+                chart.addTo("data", { type: "line", color: "#ad1457",yValueFormatString: "0.##\"%\"", dataPoints: dps });
                 chart.data[1].set("axisYType", "secondary", false);
                 chart.axisY[0].set("maximum", yTotal);
                 chart.axisY2[0].set("maximum", 100);
