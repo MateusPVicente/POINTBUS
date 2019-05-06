@@ -181,12 +181,12 @@
                     type: "column",
                     color: "#ff9800",
                     dataPoints: [
-                        { label: "Lógica", y: 15 },
-                        { label: "Conexão com o banco", y: 23 },
-                        { label: "Implementação", y: 5 },
                         { label: "Redirecionamento", y: 35 },
-                        { label: "Dados Tuncados", y: 5 },
+                        { label: "Conexão com o banco", y: 23 },
+                        { label: "Lógica", y: 15 },
                         { label: "Conversão de linguagem", y: 8 },
+                        { label: "Implementação", y: 5 },
+                        { label: "Dados Truncados", y: 5 },
                     ]
                 }]
             });
