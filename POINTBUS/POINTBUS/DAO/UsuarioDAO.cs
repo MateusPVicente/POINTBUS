@@ -18,6 +18,14 @@ namespace POINTBUS.DAO
             }
         }
 
+        public IList<Usuario> Lista()
+        {
+            using (var contexto = new OnibusContext())
+            {
+                return contexto.Usuario.ToList();
+            }
+        }
+
         public void Atualiza(Usuario user)
         {
             using (var contexto = new OnibusContext())
@@ -27,13 +35,11 @@ namespace POINTBUS.DAO
             }
         }
 
-        public Usuario Busca(string nome, string senha)
+        public Usuario Busca(string email, string senha)
         {
             using (var contexto = new OnibusContext())
             {
-                return contexto.Usuario
-                .Where(p => p.Nome == nome && p.Senha == senha)
-                .FirstOrDefault();
+                return contexto.Usuario.Where(p => p.Email == email && p.Senha == senha).FirstOrDefault();
             }
         }
     }

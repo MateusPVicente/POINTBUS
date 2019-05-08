@@ -34,10 +34,13 @@ namespace POINTBUS.Controllers
         {
             UsuarioDAO dao = new UsuarioDAO();
             Usuario user = dao.Busca(email, senha);
-            if (user == null)
-                return RedirectToAction("Home");
-            else
+            if (user != null)
+            {
+                ViewBag.Usuario = user;
                 return RedirectToAction("Index", "Usuario");
+            }
+            else
+                return Redirect("~/Home.aspx");
         }
     }
 }

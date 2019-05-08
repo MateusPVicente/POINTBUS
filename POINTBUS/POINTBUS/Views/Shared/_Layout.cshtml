@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width" />
     <title>POINTBUS</title>
     <link type="text/css" rel="stylesheet" href="~/Content/materialize.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/materialize.min.css" />
@@ -20,9 +21,10 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">HOME</a></li>
-                <li><a href="badges.html">PRA ONDE VAI?</a></li>
+                <li><a href="xxx">PRA ONDE VAI?</a></li>
                 @*<li><a href="Usuario/Cadastro">CADASTRE-SE</a></li>*@
-                <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+                @*<li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>*@
+                <li><a href="#">@ViewBag.Usuario.Nome</a></li>
             </ul>
         </div>
     </nav>
@@ -62,29 +64,5 @@
             </div>
         </div>
     </footer>
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4 class="center-align">LOGIN</h4>
-            <form id="f">
-
-                <tr>
-                    <td><input type="text" id="usu" class="input1" required placeholder="E-mail"></td>
-                </tr>
-                <tr>
-                    <td><input type="password" id="sen" class="input2" required placeholder=" Senha"></td>
-                </tr>
-
-                <br><br>
-                <input type="submit" id="btnEntrar" class="waves-effect waves-light btn" value="Entrar">
-
-                <br><br>
-                <h6>Não possui uma conta? Cadastre-se agora!</h6>
-
-                <br>
-                <a href="Cadastro.html" id="btnCadastrar" class="waves-effect waves-light btn">Cadastre-se</a>
-
-            </form>
-        </div>
-    </div>
 </body>
 </html>
