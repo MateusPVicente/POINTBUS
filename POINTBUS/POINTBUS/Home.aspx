@@ -162,7 +162,7 @@
 
             var chart = new CanvasJS.Chart("chartContainer", {
                 title: {
-                    text: "Erros mais frequentes"
+                    text: "Gráfico de Pareto"
                 },
                 axisY: {
                     title: "Numero de erros",
