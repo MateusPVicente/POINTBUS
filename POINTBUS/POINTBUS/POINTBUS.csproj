@@ -222,6 +222,7 @@
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="DAO\OnibusContext.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

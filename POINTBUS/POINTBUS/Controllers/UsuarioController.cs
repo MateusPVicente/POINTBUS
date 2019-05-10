@@ -19,7 +19,20 @@ namespace POINTBUS.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            object usuario = Session["usuarioLogado"];
+            if (usuario != null)
+            {
+                UsuarioDAO dao = new UsuarioDAO();
+                IList<Usuario> alu = dao.Lista();
+                ViewBag.Aluno = alu;
+                ViewBag.Usuario = Session["usuarioLogado"];
+                return View();
+            }
+            else
+            {
+                // se não houver usuario autenticado, redireciona para a página de login
+                return Redirect("~/Home.aspx");
+            }
         }
 
         [HttpPost]
@@ -30,17 +43,21 @@ namespace POINTBUS.Controllers
             return RedirectToAction("Index", "Usuario");
         }
 
-        public ActionResult Logar(string email, string senha)
+        public ActionResult Logar(String email, String senha)
         {
             UsuarioDAO dao = new UsuarioDAO();
-            Usuario user = dao.Busca(email, senha);
-            if (user != null)
+            Usuario usu = dao.Busca(email, senha);
+            // Se o objeto usu não for igual a null será guardado em uma variável de sessão o objeto usu (Usuario) e em seguida será redirecionado para a página de listagem de RAs
+            if (usu != null)
             {
-                ViewBag.Usuario = user;
+                Session["usuarioLogado"] = usu; //enviar usuário para a view Index do controller Aluno
                 return RedirectToAction("Index", "Usuario");
             }
             else
+            {
+                //enviar usuário para a view Index, ou seja, para a página de Login. Como é no mesmo controller não preciso especificar no RedirectToAction
                 return Redirect("~/Home.aspx");
+            }
         }
     }
 }

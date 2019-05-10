@@ -22,6 +22,7 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">HOME</a></li>
                 <li><a href="xxx">PRA ONDE VAI?</a></li>
+                <li style="color: black">@ViewBag.Usuario.Nome</li>
                 @*<li><a href="Usuario/Cadastro">CADASTRE-SE</a></li>*@
                 @*<li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>*@
             </ul>
@@ -31,8 +32,9 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a href="#">HOME</a></li>
         <li><a href=".html">PRA ONDE VAI?</a></li>
-        <li><a href="Cadastro.html">CADASTRE-SE</a></li>
-        <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
+        <li style="color: black">@ViewBag.Usuario.Nome</li>
+        @*<li><a href="Cadastro.html">CADASTRE-SE</a></li>*@
+        @*<li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>*@
     </ul>
     <div>
         @RenderBody()
@@ -48,7 +50,6 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Acesse</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="Cadastro.html">Cadastre-se</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
                         <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
