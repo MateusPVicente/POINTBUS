@@ -48,17 +48,18 @@
         <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">LOGIN</a></li>
     </ul>
 
-      <form action="#" style="font-size: 18px">
+    <div class="row">
+      <form action="#" class="container col s12 m4 l4">
           <p>
               <span>1. Você depende do transporte público?</span>
           </p>
             <p>
               <label>
-                <input class="with-gap" name="group1" type="radio" />
+                <input class="with-gap" name="group1" type="radio" value="1" />
                 <span>Sim</span>
               </label>
               <label>
-                <input class="with-gap" name="group1" type="radio" checked />
+                <input class="with-gap" name="group1" type="radio" value="0" checked />
                 <span>Não</span>
               </label>
             </p>
@@ -67,11 +68,11 @@
           </p>
             <p>
               <label>
-                <input class="with-gap" name="group2" type="radio" />
+                <input class="with-gap" name="group2" type="radio" value="0" />
                 <span>Sim</span>
               </label>
               <label>
-                <input class="with-gap" name="group2" type="radio" checked />
+                <input class="with-gap" name="group2" type="radio" value="1" checked />
                 <span>Não</span>
               </label>
             </p>
@@ -80,11 +81,11 @@
           </p>
             <p>
               <label>
-                <input class="with-gap" name="group3" type="radio" />
+                <input class="with-gap" name="group3" type="radio" value="1" />
                 <span>Sim</span>
               </label>
               <label>
-                <input class="with-gap" name="group3" type="radio" checked />
+                <input class="with-gap" name="group3" type="radio" value="0" checked />
                 <span>Não</span>
               </label>
             </p>
@@ -93,15 +94,108 @@
           </p>
             <p>
               <label>
-                <input class="with-gap" name="group4" type="radio" />
+                <input class="with-gap" name="group4" type="radio" value="0" />
                 <span>Sim</span>
               </label>
               <label>
-                <input class="with-gap" name="group4" type="radio" checked />
+                <input class="with-gap" name="group4" type="radio" value="1" checked />
                 <span>Não</span>
               </label>
             </p>
+            <p>
+              <span>5. Existem pontos de ônibus perto de você?</span>
+          </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group5" type="radio" value="0" />
+                <span>Sim</span>
+              </label>
+              <label>
+                <input class="with-gap" name="group5" type="radio" value="1" checked />
+                <span>Não</span>
+              </label>
+            </p>
+            <p>
+              <span>6. Você tem dificuldade em encontrar o ônibus certo?</span>
+          </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group6" type="radio" value="1" />
+                <span>Sim</span>
+              </label>
+              <label>
+                <input class="with-gap" name="group6" type="radio" value="0" checked />
+                <span>Não</span>
+              </label>
+            </p>
+
+            <button class="btn waves-effect waves-light" type="submit" name="action">Enviar Pesquisa
+              <i class="material-icons right">send</i>
+            </button>
+
           </form>
+
+          <div id="chartContainer" class="container col s12 m8 l8" style="height: 600px;"></div>
+      </div>
+          <script>
+              window.onload = function () {
+      
+                  var chart = new CanvasJS.Chart("chartContainer", {
+                      title: {
+                          text: "Dificuldades Com O Transporte Público"
+                      },
+                      axisY: {
+                          title: "múmero de ocasiões",
+                          lineColor: " #ff9800",
+                          tickColor: " #ff9800",
+                          labelFontColor: " #ff9800"
+                      },
+                      axisY2: {
+                          title: "porcentagem",
+                          suffix: "%",
+                          lineColor: "#ad1457",
+                          tickColor: "#ad1457 ",
+                          labelFontColor: "#ad1457"
+                      },
+                      data: [{
+                          type: "column",
+                          color: "#ff9800",
+                          dataPoints: [
+                              { label: "Dependência", y: 35 },
+                              { label: "Estrutura inadequada", y: 23 },
+                              { label: "Somente o passe", y: 15 },
+                              { label: "Preço injusto do passe", y: 8 },
+                              { label: "Difícil localização de pontos", y: 5 },
+                              { label: "Falta de informação de ônibus", y: 5 },
+                          ]
+                      }]
+                  });
+                  chart.render();
+                  createPareto();
+      
+                  function createPareto() {
+                      var dps = [];
+                      var yValue, yTotal = 0, yPercent = 0;
+      
+                      for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
+                          yTotal += chart.data[0].dataPoints[i].y;
+                      }
+      
+                      for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
+                          yValue = chart.data[0].dataPoints[i].y;
+                          yPercent += (yValue / yTotal * 100);
+                          dps.push({ label: chart.data[0].dataPoints[i].label, color: "#ad1457", y: yPercent });
+                      }
+      
+                      chart.addTo("data", { type: "line", color: "#ad1457", yValueFormatString: "0.##\"%\"", dataPoints: dps });
+                      chart.data[1].set("axisYType", "secondary", false);
+                      chart.axisY[0].set("maximum", yTotal);
+                      chart.axisY2[0].set("maximum", 100);
+                  }
+      
+              }
+          </script>
+              </div>
 
     <div id="modal1" class="modal">
       <div class="modal-content">
@@ -131,4 +225,5 @@
     </body>
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </html>
