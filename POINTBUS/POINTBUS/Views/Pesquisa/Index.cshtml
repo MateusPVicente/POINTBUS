@@ -9,78 +9,78 @@
         <p>
             <span>1. Você depende do transporte público?</span>
         </p>
-        <p name="p.Qtd1">
+        <p>
             <label>
-                <input class="with-gap" name="group1" type="radio" value="1" />
+                <input class="with-gap" type="radio" value="1" name="p.Qtd1" />
                 <span>Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="group1" type="radio" value="0" checked />
+                <input class="with-gap" name="p.Qtd1" type="radio" value="0" checked />
                 <span>Não</span>
             </label>
         </p>
         <p>
             <span>2. Você acha a estrutura do transporte adequada e acessível a deficientes?</span>
         </p>
-        <p name="p.Qtd2">
+        <p>
             <label>
-                <input class="with-gap" name="group2" type="radio" value="0" />
+                <input class="with-gap" name="p.Qtd2" type="radio" value="0" />
                 <span>Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="group2" type="radio" value="1" checked />
+                <input class="with-gap" name="p.Qtd2" type="radio" value="1" checked />
                 <span>Não</span>
             </label>
         </p>
         <p>
             <span>3. Você foi afetado pelo fato de não poder pagar em dinheiro?</span>
         </p>
-        <p name="p.Qtd3">
+        <p>
             <label>
-                <input class="with-gap" name="group3" type="radio" value="1" />
+                <input class="with-gap" name="p.Qtd3" type="radio" value="1" />
                 <span>Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="group3" type="radio" value="0" checked />
+                <input class="with-gap" name="p.Qtd3" type="radio" value="0" checked />
                 <span>Não</span>
             </label>
         </p>
         <p>
             <span>4. Você está satisfeito com o preço da passagem?</span>
         </p>
-        <p name="p.Qtd4">
+        <p>
             <label>
-                <input class="with-gap" name="group4" type="radio" value="0" />
+                <input class="with-gap" name="p.Qtd4" type="radio" value="0" />
                 <span>Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="group4" type="radio" value="1" checked />
+                <input class="with-gap" name="p.Qtd4" type="radio" value="1" checked />
                 <span>Não</span>
             </label>
         </p>
         <p>
             <span>5. Existem pontos de ônibus perto de você?</span>
         </p>
-        <p name="p.Qtd5">
+        <p>
             <label>
-                <input class="with-gap" name="group5" type="radio" value="0" />
+                <input class="with-gap" name="p.Qtd5" type="radio" value="0" />
                 <span>Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="group5" type="radio" value="1" checked />
+                <input class="with-gap" name="p.Qtd5" type="radio" value="1" checked />
                 <span>Não</span>
             </label>
         </p>
         <p>
             <span>6. Você tem dificuldade em encontrar o ônibus certo?</span>
         </p>
-        <p name="p.Qtd6 = value">
+        <p>
             <label>
-                <input class="with-gap" name="group6" type="radio" value="1" />
+                <input class="with-gap" name="p.Qtd6" type="radio" value="1" />
                 <span>Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="group6" type="radio" value="0" checked />
+                <input class="with-gap" name="p.Qtd6" type="radio" value="0" checked />
                 <span>Não</span>
             </label>
         </p>
@@ -94,28 +94,31 @@
 
     <div id="chartContainer" class="container col s12 m8 l8" style="height: 600px;"></div>
 </div>
-<script>
-              window.onload = function () {
 
-                  var chart = new CanvasJS.Chart("chartContainer", {
+@if (ViewBag.Pesquisa != null)
+{
+<script>
+                    window.onload = function() {
+
+                        var chart = new CanvasJS.Chart("chartContainer", {
                       title: {
-                          text: "Dificuldades Com O Transporte Público"
+                        text: "Dificuldades Com O Transporte Público"
                       },
                       axisY: {
-                          title: "múmero de ocasiões",
+                        title: "múmero de ocasiões",
                           lineColor: " #ff9800",
                           tickColor: " #ff9800",
                           labelFontColor: " #ff9800"
                       },
                       axisY2: {
-                          title: "porcentagem",
+                        title: "porcentagem",
                           suffix: "%",
                           lineColor: "#ad1457",
                           tickColor: "#ad1457 ",
                           labelFontColor: "#ad1457"
                       },
                       data: [{
-                          type: "column",
+                        type: "column",
                           color: "#ff9800",
                           dataPoints: [
                               { label: "Dependência", y: @ViewBag.Pesquisa.Qtd1 },
@@ -127,30 +130,32 @@
                           ]
                       }]
                   });
-                  chart.render();
-                  createPareto();
+                    chart.render();
+                    createPareto();
 
-                  function createPareto() {
-                      var dps = [];
-                      var yValue, yTotal = 0, yPercent = 0;
+                    function createPareto() {
+                        var dps = [];
+                        var yValue, yTotal = 0, yPercent = 0;
 
-                      for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
-                          yTotal += chart.data[0].dataPoints[i].y;
-                      }
+                        for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
+                            yTotal += chart.data[0].dataPoints[i].y;
+                        }
 
-                      for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
-                          yValue = chart.data[0].dataPoints[i].y;
-                          yPercent += (yValue / yTotal * 100);
-                          dps.push({ label: chart.data[0].dataPoints[i].label, color: "#ad1457", y: yPercent });
-                      }
+                        for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
+                            yValue = chart.data[0].dataPoints[i].y;
+                            yPercent += (yValue / yTotal * 100);
+                            dps.push({ label: chart.data[0].dataPoints[i].label, color: "#ad1457", y: yPercent });
+                }
 
-                      chart.addTo("data", { type: "line", color: "#ad1457", yValueFormatString: "0.##\"%\"", dataPoints: dps });
-                      chart.data[1].set("axisYType", "secondary", false);
-                      chart.axisY[0].set("maximum", yTotal);
-                      chart.axisY2[0].set("maximum", 100);
-                  }
+                chart.addTo("data", { type: "line", color: "#ad1457", yValueFormatString: "0.##\"%\"", dataPoints: dps });
+                chart.data[1].set("axisYType", "secondary", false);
+                chart.axisY[0].set("maximum", yTotal);
+                chart.axisY2[0].set("maximum", 100);
+            }
 
-              }
+        }
 </script>
-              </div>
+    }
+    
+    </div>
 

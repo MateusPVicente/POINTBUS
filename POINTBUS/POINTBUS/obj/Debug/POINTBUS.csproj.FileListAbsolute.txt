@@ -380,7 +380,6 @@ C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\bin\pt-br\System.Web
 C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csprojResolveAssemblyReference.cache
 C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CoreCompileInputs.cache
 C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.dll
 C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.pdb
@@ -578,3 +577,5 @@ B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CoreCompil
 B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CopyComplete
 B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.dll
 B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.pdb
+C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csprojAssemblyReference.cache
+C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CopyComplete

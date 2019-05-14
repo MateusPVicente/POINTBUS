@@ -13,6 +13,8 @@ namespace POINTBUS.DAO
         {
             using (var context = new OnibusContext())
             {
+                p.ID = 1;
+                p.Total = 1;
                 context.Pesquisa.Add(p);
                 context.SaveChanges();
             }

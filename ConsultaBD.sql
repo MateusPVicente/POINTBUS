@@ -16,7 +16,7 @@ data date not null
 )
 
 create table Pesquisa(
-ID int primary key identity,
+ID int primary key,
 total int not null,
 qtd1 int not null,
 qtd2 int not null,
@@ -27,7 +27,7 @@ qtd6 int not null,
 )
 select * from Pesquisa
 
-insert into Pesquisa values(0,0,0,0,0,0,0)
+insert into Pesquisa values(1,0,0,0,0,0,0,0)
 
 create trigger p_tg
 on Pesquisa
