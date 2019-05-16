@@ -577,5 +577,4 @@ B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CoreCompil
 B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CopyComplete
 B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.dll
 B:\COTUCA\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.pdb
-C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csprojAssemblyReference.cache
-C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csproj.CopyComplete
+C:\Users\u18186\Documents\GitHub\POINTBUS\POINTBUS\POINTBUS\obj\Debug\POINTBUS.csprojResolveAssemblyReference.cache

@@ -3,7 +3,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-pareto.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+<link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
+<link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
 <div class="row">
     <form action="/Pesquisa/Adicionar" method="post" class="container col s12 m4 l4">
         <p>
@@ -92,70 +97,58 @@
 
     </form>
 
-    <div id="chartContainer" class="container col s12 m8 l8" style="height: 600px;"></div>
+    <div id="container" class="container col s12 m8 l8" style="height: 600px;"></div>
+
 </div>
 
 @if (ViewBag.Pesquisa != null)
 {
-<script>
-                    window.onload = function() {
+    <script>
+        anychart.onDocumentReady(function () {
+            var data = [
+                { x: 'Dependência', value: @ViewBag.Pesquisa.Qtd1 },
+                { x: 'Estrutura inadequada', value: @ViewBag.Pesquisa.Qtd2 },
+                { x: 'Somente o passe', value: @ViewBag.Pesquisa.Qtd3 },
+                { x: 'Preço injusto do passe', value: @ViewBag.Pesquisa.Qtd4 },
+                { x: 'Falta de pontos próximos', value: @ViewBag.Pesquisa.Qtd5 },
+                { x: 'Falta de informação de ônibus', value: @ViewBag.Pesquisa.Qtd6 },
+            ];
 
-                        var chart = new CanvasJS.Chart("chartContainer", {
-                      title: {
-                        text: "Dificuldades Com O Transporte Público"
-                      },
-                      axisY: {
-                        title: "múmero de ocasiões",
-                          lineColor: " #ff9800",
-                          tickColor: " #ff9800",
-                          labelFontColor: " #ff9800"
-                      },
-                      axisY2: {
-                        title: "porcentagem",
-                          suffix: "%",
-                          lineColor: "#ad1457",
-                          tickColor: "#ad1457 ",
-                          labelFontColor: "#ad1457"
-                      },
-                      data: [{
-                        type: "column",
-                          color: "#ff9800",
-                          dataPoints: [
-                              { label: "Dependência", y: @ViewBag.Pesquisa.Qtd1 },
-                              { label: "Estrutura inadequada", y: @ViewBag.Pesquisa.Qtd2 },
-                              { label: "Somente o passe", y: @ViewBag.Pesquisa.Qtd3 },
-                              { label: "Preço injusto do passe", y: @ViewBag.Pesquisa.Qtd4 },
-                              { label: "Difícil localização de pontos", y: @ViewBag.Pesquisa.Qtd5 },
-                              { label: "Falta de informação de ônibus", y: @ViewBag.Pesquisa.Qtd6 },
-                          ]
-                      }]
-                  });
-                    chart.render();
-                    createPareto();
+            var chart = anychart.pareto(data);
 
-                    function createPareto() {
-                        var dps = [];
-                        var yValue, yTotal = 0, yPercent = 0;
+            chart.title('Dificuldades Com O Transporte Público');
 
-                        for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
-                            yTotal += chart.data[0].dataPoints[i].y;
-                        }
+            chart.yAxis(0).title('Número de Ocasiões');
 
-                        for (var i = 0; i < chart.data[0].dataPoints.length; i++) {
-                            yValue = chart.data[0].dataPoints[i].y;
-                            yPercent += (yValue / yTotal * 100);
-                            dps.push({ label: chart.data[0].dataPoints[i].label, color: "#ad1457", y: yPercent });
-                }
+            chart.yAxis(1).title('Porcentagem Acumulada');
 
-                chart.addTo("data", { type: "line", color: "#ad1457", yValueFormatString: "0.##\"%\"", dataPoints: dps });
-                chart.data[1].set("axisYType", "secondary", false);
-                chart.axisY[0].set("maximum", yTotal);
-                chart.axisY2[0].set("maximum", 100);
-            }
+            chart.animation(true);
 
-        }
-</script>
-    }
-    
-    </div>
+            chart.lineMarker()
+                .value(80)
+                .axis(chart.yAxis(1))
+                .stroke('#A5B3B3', 1, '5 2', 'round');
 
+            var column = chart.getSeriesAt(0);
+            column.tooltip().format('Número de ocasiões: {%Value}');
+
+            var line = chart.getSeriesAt(1);
+            line.seriesType('spline')
+                .markers(true);
+            line.yScale().ticks().interval(10);
+            line.labels()
+                .enabled(true)
+                .anchor('right-bottom')
+                .format('{%CF}%');
+            line.tooltip().format('Frequência acumulada: {%CF}% \n Frequência relativa: {%RF}%');
+
+            chart.crosshair()
+                .enabled(true)
+                .xLabel(false);
+
+            chart.container('container');
+
+            chart.draw();
+        });
+    </script>
+}
