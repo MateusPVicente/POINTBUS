@@ -54,9 +54,7 @@
                       <ul>
                         <li><a class="grey-text text-lighten-3" href="Usuario/Cadastro">Cadastre-se</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
-                          <li><a class="grey-text text-lighten-3" href="Pesquisa/Index">Pesquisa</a></li>
-                        <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
+                        <li><a class="grey-text text-lighten-3" href="Pesquisa/Index">Pesquisa</a></li>
                       </ul>
                     </div>
                   </div>
