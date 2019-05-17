@@ -21,6 +21,11 @@ namespace POINTBUS.Controllers
             return View();
         }
 
+        public ActionResult Sair()
+        {
+            Session.Abandon();
+            return Redirect("~/Home.aspx");
+        }
 
         // GET: Home
         public ActionResult Index()

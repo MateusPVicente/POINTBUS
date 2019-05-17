@@ -36,7 +36,7 @@
                 <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
                 @if (ViewBag.Usuario != null)
                 {
-                    <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown2'>@ViewBag.Usuario.Nome</a></li>
+                    <li style="color: white; background-color: #0080FF; width: 130px; text-align: center"><a class='dropdown-trigger' href="#" data-target='dropdown2'>@ViewBag.Usuario.Nome</a></li>
                 }
             </ul>
         </div>
@@ -44,55 +44,49 @@
 
     <ul class="sidenav" id="mobile-demo">
         <li><a href="/Usuario">HOME</a></li>
-        <li><a href=".html">PRA ONDE VAI?</a></li>
+        <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
         @if (ViewBag.Usuario != null)
         {
             <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
         }
     </ul>
     <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">SAIR</a></li>
+        <li><a href="#!"><i class="material-icons">portrait</i>PERFIL</a></li>
         <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">Sair</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+        <li><a href="/Usuario/Sair"><i class="material-icons">exit_to_app</i>SAIR</a></li>
     </ul>
     <ul id='dropdown2' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">SAIR</a></li>
+        <li><a href="#!" class="light-blue-text"><i class="material-icons">portrait</i>PERFIL</a></li>
         <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">Sair</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+        <li class="red"><a href="/Usuario/Sair" class="white-text"><i class="material-icons">exit_to_app</i>SAIR</a></li>
     </ul>
     <div>
         @RenderBody()
     </div>
     @*<footer class="page-footer cyan darken-3 accent-4">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Já decidiu pra onde vai?</h5>
-                    <p class="grey-text text-lighten-4">Você pode selecionar seu destino e ainda economizar tempo e dinheiro com uma viagem de ônibus.</p>
-                    <p class="grey-text text-lighten-4">Além disso, você diminui significativamente a poluição diária emitida no planeta.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Acesse</h5>
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
-                        <li><a class="grey-text text-lighten-3" href="/Pesquisa/Index">Pesquisa</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
             <div class="container">
-                © 2019 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="Sobre.aspx">Sobre</a>
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Já decidiu pra onde vai?</h5>
+                        <p class="grey-text text-lighten-4">Você pode selecionar seu destino e ainda economizar tempo e dinheiro com uma viagem de ônibus.</p>
+                        <p class="grey-text text-lighten-4">Além disso, você diminui significativamente a poluição diária emitida no planeta.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Acesse</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/Pesquisa/Index">Pesquisa</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>*@
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2019 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="Sobre.aspx">Sobre</a>
+                </div>
+            </div>
+        </footer>*@
 </body>
 
 @*<script src="Scripts/dropdown.js"></script>*@
