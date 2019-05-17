@@ -8,12 +8,17 @@
     <link type="text/css" rel="stylesheet" href="~/Content/custom.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="~/Scripts/materialize.js"></script>
-    <script src="~/Scripts/modal.js"></script>
-    <script src="~/Scripts/menu.js"></script>
-    <script src="~/Scripts/materialize.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script src="Scripts/materialize.js"></script>
+    <script src="Scripts/materialize.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(elems, open);
+        });
+    </script>
 </head>
 <body>
     <nav class="transparent container" id="menu">
@@ -25,19 +30,27 @@
                 <li><a href="xxx">PRA ONDE VAI?</a></li>
                 @if (ViewBag.Usuario != null)
                 {
-                    <li style="color: white; background-color: #0080FF"><a>@ViewBag.Usuario.Nome</a></li>
+                    <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
                 }
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">HOME</a></li>
+        <li><a href="/Usuario">HOME</a></li>
         <li><a href=".html">PRA ONDE VAI?</a></li>
         @if (ViewBag.Usuario != null)
         {
-            <li style="color: white; background-color: #0080FF"><a>@ViewBag.Usuario.Nome</a></li>
+            <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
         }
+    </ul>
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">SAIR</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">Sair</a></li>
+        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
     </ul>
     <div>
         @RenderBody()
@@ -54,7 +67,7 @@
                     <h5 class="white-text">Acesse</h5>
                     <ul>
                         <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
-                        <li><a class="grey-text text-lighten-3" href="Pesquisa/Index">Pesquisa</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/Pesquisa/Index">Pesquisa</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,4 +80,9 @@
         </div>
     </footer>
 </body>
+
+@*<script src="Scripts/dropdown.js"></script>*@
+<script src="Scripts/modal.js"></script>
+<script src="Scripts/menu.js"></script>
+
 </html>

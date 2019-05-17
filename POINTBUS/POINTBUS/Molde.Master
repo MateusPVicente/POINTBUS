@@ -54,7 +54,6 @@
                       <ul>
                         <li><a class="grey-text text-lighten-3" href="Usuario/Cadastro">Cadastre-se</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Escolha seu destino</a></li>
-                        <li><a class="grey-text text-lighten-3" href="Pesquisa/Index">Pesquisa</a></li>
                       </ul>
                     </div>
                   </div>
@@ -62,7 +61,7 @@
                 <div class="footer-copyright">
                   <div class="container">
                   © 2019 Copyright Text
-                  <a class="grey-text text-lighten-4 right" href="Sobre.aspx">Sobre</a>
+                  <a class="grey-text text-lighten-4 right" href="./Sobre.aspx">Sobre</a>
                   </div>
                 </div>
               </footer>

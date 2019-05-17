@@ -267,6 +267,7 @@
     <Content Include="img\destinos.png" />
     <Content Include="img\estrada.png" />
     <Content Include="img\fundo.png" />
+    <Content Include="img\fundo123.png" />
     <Content Include="img\fundoEstrada.png" />
     <Content Include="img\iconeLampada.png" />
     <Content Include="img\iconeLocation.png" />
@@ -283,6 +284,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Molde.Master" />
+    <Content Include="Scripts\dropdown.js" />
     <Content Include="Scripts\mapa.js" />
     <Content Include="Scripts\materialize.js" />
     <Content Include="Scripts\materialize.min.js" />

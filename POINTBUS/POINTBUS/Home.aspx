@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <img id="imagemFundo" src="img/fundo.png">
+    <img id="imagemFundo" src="img/fundo123.png">
 
     <div class="row" id="coisas">
         <div class="col l6 m12 s12">
