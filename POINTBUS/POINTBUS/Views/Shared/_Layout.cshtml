@@ -12,6 +12,7 @@
     <script src="Scripts/materialize.js"></script>
     <script src="Scripts/materialize.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -29,8 +30,8 @@
                 <li><a href="/Usuario">HOME</a></li>
                 <li><a href="xxx">PRA ONDE VAI?</a></li>
                 @if (ViewBag.Usuario != null)
-                {
-                    <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
+                    {
+                        <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown2'>@ViewBag.Usuario.Nome</a></li>
                 }
             </ul>
         </div>
@@ -45,6 +46,14 @@
         }
     </ul>
     <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">SAIR</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">Sair</a></li>
+        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    </ul>
+    <ul id='dropdown2' class='dropdown-content'>
         <li><a href="#!">one</a></li>
         <li><a href="#!">SAIR</a></li>
         <li class="divider" tabindex="-1"></li>
