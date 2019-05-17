@@ -16,6 +16,12 @@ namespace POINTBUS.Controllers
             return View();
         }
 
+        public ActionResult Mapa()
+        {
+            return View();
+        }
+
+
         // GET: Home
         public ActionResult Index()
         {

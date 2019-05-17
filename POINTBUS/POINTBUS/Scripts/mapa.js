@@ -1,4 +1,5 @@
-﻿function initMap() { //inicializacao do mapa
+﻿
+function initMap() { //inicializacao do mapa
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
         center: { lat: -14.235, lng: -51.9253 }  // Brasil
@@ -19,12 +20,12 @@
 
     destino = destino.value;
 
-    if (origem == "" || origem == "Localizacao Atual")
+    if (origem == "") // se origem for igual a casa do usuário colocar uma casinha(?????)
         origem = '13040702';// casa do usuário
 
     if (destino == "")
-        destino = '13035270' // trabalho do usuario
-    // se não tiver endereco de trabalho cadastrado, apenas colocar destino como ""
+        destino = '13035270' // trabalho do usuario 
+    // se não tiver endereco de trabalho cadastrado, apenas colocar destino como ""  
 
     var directionsService = new google.maps.DirectionsService; // adiciona o sertvico de direcoes para rota
 
@@ -54,10 +55,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
-function definirRota(origin, destination, service, display) { // vai fazr a rota que tem uma origem, destino, servico e exibicao como parâmetro
-    service.route({ // rota
-        origin: origin, // origem
-        // icon: '../home.png', 
+function definirRota(origin, destination, service, display) { 
+    service.route({
+        origin: origin,
         destination: destination,
         travelMode: 'TRANSIT',
         avoidTolls: true // evitar pedagios

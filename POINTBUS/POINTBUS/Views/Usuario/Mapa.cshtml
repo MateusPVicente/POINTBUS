@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Mapa";
+    Layout = "~/Views/Shared/_Layout.cshtml";   
+}
+
+<div class="amber" id="paginaMapa">
+    <div class="row container">
+        <div id="pac-container" class="col s5">
+            <!-- caixa de texto da origem do usuario -->
+            <input id="origem" type="text" placeholder="Escreva seu origem">
+        </div>
+        <div class="col s2"></div> <!-- espaco entre os inputs -->
+        <div id="pac-container" class="col s5">
+            <!-- caixa de texto do destino do usuario -->
+            <input id="destino" type="text" placeholder="Escreva o lugar de destino">
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class="col s2"></div>
+        <input class="waves-effect waves-light btn col s3" type="submit" onclick="initMap()" value="Buscar rota"> <!-- botao ir de onde está escrito -->
+        <div class="col s2"></div>
+        <input class="waves-effect waves-light btn col s3" type="submit" onclick="chamarLocalizacaoAtual()" value="Usar localização atual"> <!-- botao ir de onde está o usuário (geolacalização) -->
+        <div class="col s2"></div>
+    </div>
+
+    <div id="map" class="container"></div>
+
+    <div class="row container">
+        <div class="col s3"></div>
+        <span id="CO2" class="col s6"></span> <!-- vai colocar quanto de CO2 será economizado aqui -->
+        <div class="col s3"></div>
+    </div>
+    <div class="row container">
+        <div class="col s3"></div>
+        <span id="total" class="col s6">
+            <!-- vai colocar a distancia que sera percorrida aqui -->
+        </span>
+        </div>
+        <div class="col s3"></div>
+    </div>
+            <div id="right-panel">
+                <!-- painel par colocar a rota -->
+            </div>
+        </div>
+
+
