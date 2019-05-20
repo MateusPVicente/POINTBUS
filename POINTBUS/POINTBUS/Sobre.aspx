@@ -14,7 +14,7 @@
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Desenvolvedores<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">Pagina inicial</a></p>
+          <p><a href="/Home.aspx">Pagina inicial</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Sobre os Desenvolvedores<i class="material-icons right">close</i></span>
@@ -30,7 +30,7 @@
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">A Ideia<i class="material-icons right">more_vert</i></span>
-          <p><a href="#">Cadastre-se</a></p>
+          <p><a href="/Usuario/Cadastro">Cadastre-se</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">A Ideia e os Objetivos<i class="material-icons right">close</i></span>
