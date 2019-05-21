@@ -13,7 +13,7 @@ namespace POINTBUS.Models
         public string Email { get; set; }
         public string Senha { get; set; }
         public DateTime DataNascimento { get; set; }
-        public string CEPcasa { get; set; }
-        public string CEPtrabalho { get; set; }
+        public string CepCasa { get; set; }
+        public string CepTrabalho { get; set; }
     }
 }
