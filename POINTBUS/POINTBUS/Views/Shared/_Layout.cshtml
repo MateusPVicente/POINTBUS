@@ -36,7 +36,7 @@
                 <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
                 @if (ViewBag.Usuario != null)
                 {
-                    <li style="color: white; background-color: #0080FF; width: 130px; text-align: center"><a class='dropdown-trigger' href="#" data-target='dropdown2'>@ViewBag.Usuario.Nome</a></li>
+                    <li class="deep-purple" style="color: white; width: 130px; text-align: center"><a class='dropdown-trigger' href="#" data-target='dropdown2'>@ViewBag.Usuario.Nome</a></li>
                 }
             </ul>
         </div>
@@ -47,7 +47,7 @@
         <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
         @if (ViewBag.Usuario != null)
         {
-            <li style="color: white; background-color: #0080FF"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
+            <li class="deep-purple" style="color: white;"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
         }
     </ul>
     <ul id='dropdown1' class='dropdown-content'>
@@ -56,7 +56,7 @@
         <li><a href="/Usuario/Sair"><i class="material-icons">exit_to_app</i>SAIR</a></li>
     </ul>
     <ul id='dropdown2' class='dropdown-content'>
-        <li><a href="#" class="light-blue-text">CANCELAR</a></li>
+        <li><a href="#" class="deep-purple-text">CANCELAR</a></li>
         <li class="divider" tabindex="-1"></li>
         <li class="red"><a href="/Usuario/Sair" class="white-text"><i class="material-icons">exit_to_app</i>SAIR</a></li>
     </ul>
@@ -88,7 +88,6 @@
         </footer>
 </body>
 
-@*<script src="Scripts/dropdown.js"></script>*@
 <script type="text/javascript" src="~/Scripts/mapa.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBh6JK23HFsrPff9iyGpdfzztePcfRhq4&libraries=places&callback=initMap" async defer></script>
 
