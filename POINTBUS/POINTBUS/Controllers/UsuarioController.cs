@@ -18,6 +18,7 @@ namespace POINTBUS.Controllers
 
         public ActionResult Mapa()
         {
+            ViewBag.Usuario = Session["usuarioLogado"];
             return View();
         }
 

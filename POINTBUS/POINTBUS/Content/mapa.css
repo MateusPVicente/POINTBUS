@@ -1,41 +1,50 @@
-﻿#paginaMapa {
-    /*position: relative;
-    top: 40em;*/
-    padding-top: 8em;
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+#total, #CO2{
+    font-size: 2rem;
+}
+
+#paginaMapa {
+    padding-top: 10em;
+    margin: 0;
 }
 
 #right-panel {
-    font-family: 'sans-serif';
+    font-family: 'Berlin Sans FB';
     line-height: 30px;
     padding-left: 10px;
+    background-color: #304ffe;
+    padding: 2em;
+    color: white; /* mudar a cor da letra do painel*/
 }
 
-#right-panel select, #right-panel input {
-    font-size: 15px;
+.warnbox-content {
+    color: #000000;
 }
 
-#right-panel select {
-    width: 100%;
+.adp-placemark tbody {
+    background-color: #FFFFFF;
+    font-family: 'Berlin Sans FB';
+    font-size: 1.2rem;
+    color: #000000;
+    border-radius: 50px;
+}
+adp-directions tbody {
+    font-family: 'Berlin Sans FB';
 }
 
 #right-panel i {
     font-size: 12px;
 }
 
-/* html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-} */
-
 #map {
-    height: 30em;
+    height: 40em;
     width: 100%;
-    /*left: 10%;
-    right: 10%;*/
     position: relative;
-    border-radius: 30px;
-    border: solid 5px rgb(0, 0, 0);
+    border-radius: 25px;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    /*border: solid 5px rgb(0, 0, 0);*/
 }
 
 #right-panel {
@@ -59,6 +68,7 @@ html, body {
     font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
+    color: #FFFFFF;
 }
 
 #infowindow-content .title {

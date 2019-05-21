@@ -18,14 +18,7 @@ function initMap() { //inicializacao do mapa
     autocompleteDestino.bindTo('bounds', map);
     autocompleteDestino.setFields(['address_components', 'geometry', 'icon', 'name']);
 
-    destino = destino.value;
-
-    if (origem == "") // se origem for igual a casa do usuário colocar uma casinha(?????)
-        origem = '13040702';// casa do usuário
-
-    if (destino == "")
-        destino = '13035270' // trabalho do usuario 
-    // se não tiver endereco de trabalho cadastrado, apenas colocar destino como ""  
+    destino = destino.value;             
 
     var directionsService = new google.maps.DirectionsService; // adiciona o sertvico de direcoes para rota
 
@@ -102,7 +95,7 @@ function computarDistanciaTotal(result) {
     }
     total = total / 1000; // conversao para km
     computarEconomiaDeCO2(total);
-    document.getElementById('total').innerHTML = total + ' km';
+    document.getElementById('total').innerHTML = 'Distância percorrida: ' + total + ' km';
 }
 
 function computarEconomiaDeCO2(distancia) {
