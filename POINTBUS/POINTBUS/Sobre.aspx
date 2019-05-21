@@ -4,8 +4,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br /> <br />  <br /> <br /> 
-    <div class="row ">
+    <br /> <br /> <br /> <br /> <br /> <br /> <br />
+    <div class="row">
     <div class="col l1"></div>
 
       <div class="card large col l4 m12 s12">

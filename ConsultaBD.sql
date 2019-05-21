@@ -5,8 +5,11 @@ email varchar(40) not null,
 senha varchar(30) not null,
 dataNascimento date not null,
 cepCasa char(8) not null,
-cepTrabalho char(8)
+cepTrabalho char(8) not null
 )
+
+insert into Usuario values('Mateus', 'a@gmail.com', '123', '2002-11-29' , '13035270', '13087261')
+select * from Usuario
 
 create table Destino(
 codigo int primary key identity,
@@ -15,6 +18,7 @@ cepOrigem char(8) not null,
 data date not null
 )
 
+-- Pesquisa e Gráfico de Pareto --
 create table Pesquisa(
 ID int primary key,
 total int not null,
@@ -27,8 +31,9 @@ qtd6 int not null,
 )
 select * from Pesquisa
 
-insert into Pesquisa values(1,0,0,0,0,0,0,0)
+-- insert into Pesquisa values(1,0,0,0,0,0,0,0)
 
+-- trigger para a Pesquisa
 create trigger p_tg
 on Pesquisa
 instead of insert

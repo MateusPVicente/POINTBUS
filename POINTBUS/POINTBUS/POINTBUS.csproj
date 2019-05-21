@@ -284,7 +284,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Molde.Master" />
-    <Content Include="Scripts\dropdown.js" />
     <Content Include="Scripts\mapa.js" />
     <Content Include="Scripts\materialize.js" />
     <Content Include="Scripts\materialize.min.js" />

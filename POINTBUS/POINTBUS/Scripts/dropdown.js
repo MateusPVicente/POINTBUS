@@ -1,2 +1,0 @@
-﻿
-$('.dropdown-trigger').dropdown('open')
