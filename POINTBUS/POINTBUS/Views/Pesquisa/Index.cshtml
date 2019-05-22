@@ -109,7 +109,7 @@
                 { x: 'Dependência', value: @ViewBag.Pesquisa.Qtd1 },
                 { x: 'Estrutura inadequada', value: @ViewBag.Pesquisa.Qtd2 },
                 { x: 'Só é permitido o passe', value: @ViewBag.Pesquisa.Qtd3 },
-                { x: 'Preço injusto do passe', value: @ViewBag.Pesquisa.Qtd4 },
+                { x: 'Preço do passe', value: @ViewBag.Pesquisa.Qtd4 },
                 { x: 'Falta de pontos próximos', value: @ViewBag.Pesquisa.Qtd5 },
                 { x: 'Falta de informação de ônibus', value: @ViewBag.Pesquisa.Qtd6 },
             ];
@@ -118,7 +118,7 @@
 
             chart.title('Dificuldades Com O Transporte Público');
 
-            chart.yAxis(0).title('Número de Ocasiões');
+            chart.yAxis(0).title('Número de Reclamações');
 
             chart.yAxis(1).title('Porcentagem Acumulada');
 
@@ -130,7 +130,7 @@
                 .stroke('#A5B3B3', 1, '5 2', 'round');
 
             var column = chart.getSeriesAt(0);
-            column.tooltip().format('Número de ocasiões: {%Value}');
+            column.tooltip().format('Número de reclamações: {%Value}');
 
             var line = chart.getSeriesAt(1);
             line.seriesType('spline')
