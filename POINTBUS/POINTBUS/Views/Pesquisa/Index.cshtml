@@ -9,7 +9,7 @@
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-pareto.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
 <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
 <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
-<div class="row">
+<div class="row" style="margin-top: 130px">
     <form action="/Pesquisa/Adicionar" method="post" class="container col s12 m4 l4">
         <p>
             <span>1. Você depende do transporte público?</span>
@@ -109,7 +109,7 @@
                 { x: 'Dependência', value: @ViewBag.Pesquisa.Qtd1 },
                 { x: 'Estrutura inadequada', value: @ViewBag.Pesquisa.Qtd2 },
                 { x: 'Só é permitido o passe', value: @ViewBag.Pesquisa.Qtd3 },
-                { x: 'Preço injusto do passe', value: @ViewBag.Pesquisa.Qtd4 },
+                { x: 'Preço do passe', value: @ViewBag.Pesquisa.Qtd4 },
                 { x: 'Falta de pontos próximos', value: @ViewBag.Pesquisa.Qtd5 },
                 { x: 'Falta de informação de ônibus', value: @ViewBag.Pesquisa.Qtd6 },
             ];
@@ -118,7 +118,7 @@
 
             chart.title('Dificuldades Com O Transporte Público');
 
-            chart.yAxis(0).title('Número de Ocasiões');
+            chart.yAxis(0).title('Número de Reclamações');
 
             chart.yAxis(1).title('Porcentagem Acumulada');
 
@@ -130,7 +130,15 @@
                 .stroke('#A5B3B3', 1, '5 2', 'round');
 
             var column = chart.getSeriesAt(0);
-            column.tooltip().format('Número de ocasiões: {%Value}');
+            column.fill(function ()
+            {
+                return '#e60073';
+            });
+            column.stroke(function ()
+            {
+                return 'transparent';
+            });
+            column.tooltip().format('Número de reclamações: {%Value}');
 
             var line = chart.getSeriesAt(1);
             line.seriesType('spline')
@@ -141,6 +149,8 @@
                 .anchor('right-bottom')
                 .format('{%CF}%');
             line.tooltip().format('Frequência acumulada: {%CF}% \n Frequência relativa: {%RF}%');
+
+            chart.getSeries(1).normal().stroke("#b82e8a", 2, "round");
 
             chart.crosshair()
                 .enabled(true)

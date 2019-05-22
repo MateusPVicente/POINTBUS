@@ -8,7 +8,6 @@ cepCasa char(8) not null,
 cepTrabalho char(8) not null
 )
 
-insert into Usuario values('Mateus', 'a@gmail.com', '123', '2002-11-29' , '13035270', '13087261')
 select * from Usuario
 
 create table Destino(
