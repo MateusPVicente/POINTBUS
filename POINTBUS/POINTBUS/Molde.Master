@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
         <nav class="transparent container" id="menu">
         <div class="nav-wrapper container">
-          <a href="index.html" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
+          <a href="/Home.aspx" class="brand-logo"><img src="img/logo.png" class="responsive-img valign-wrappe"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/Home.aspx">HOME</a></li>
