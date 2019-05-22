@@ -1,4 +1,20 @@
 ﻿
+window.onload = function () {
+    var x = document.getElementById("right-panel").querySelectorAll("div, b, span, a");
+    for (i = 0; i < x.length; i++) {
+        
+        if (x[i].tagName == "A")
+            x[i].style.textDecoration = "underline";
+        if (x[i].className == "warnbox-content" || x[i].className == "warnbox-c2" || x[i].className == "warnbox-c1")
+            x[i].style.backgroundColor = "white";
+            else
+            x[i].style.color = "white";
+    }
+
+    document.body.style.backgroundColor = "#8c9eff";
+        
+};
+
 function initMap() { //inicializacao do mapa
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 10,
