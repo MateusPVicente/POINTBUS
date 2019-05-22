@@ -80,13 +80,13 @@
                     </tr>
               
                     <br><br>
-                    <input type="submit" id="btnEntrar" class="btn waves-effect waves-light" value="Entrar">
+                    <button type="submit" id="btnEntrar" class="btn waves-effect waves-light deep-purple white-text">Entrar</button>
               
                     <br><br>
                     <h6>Não possui uma conta? Cadastre-se agora!</h6>
     
                     <br>
-                    <a href="/Usuario/Cadastro" id="btnCadastrar" class="btn waves-effect waves-light">Cadastre-se</a>
+                    <a href="/Usuario/Cadastro" id="btnCadastrar" class="btn waves-effect waves-light deep-purple">Cadastre-se</a>
               
                     </form>
                 </div>
