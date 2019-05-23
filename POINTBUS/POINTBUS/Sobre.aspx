@@ -4,7 +4,8 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br /> <br /> <br /> <br /> <br /> <br /> <br />
+    <link type="text/css" rel="stylesheet" href="Content/sobre.css" />
+    
     <div class="row">
     <div class="col l1"></div>
 

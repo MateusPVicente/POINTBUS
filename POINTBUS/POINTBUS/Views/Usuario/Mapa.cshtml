@@ -8,9 +8,9 @@
     <div class="row container">
         <div id="pac-container" class="col s5">
             <!-- caixa de texto da origem do usuario -->
-            <input id="origem" type="text" placeholder="Escreva seu origem" value="@ViewBag.Usuario.CepCasa">
+            <input id="origem" type="text" placeholder="Escreva sua origem" value="@ViewBag.Usuario.CepCasa">
         </div>
-        <div class="col s2"></div> <!-- espaco entre os inputs -->
+        <div class="col s0"></div> <!-- espaco entre os inputs -->
         <div id="pac-container" class="col s5">
             <!-- caixa de texto do destino do usuario -->
             <input id="destino" type="text" placeholder="Escreva o lugar de destino" value="@ViewBag.Usuario.CepTrabalho">
@@ -18,11 +18,11 @@
     </div>
 
     <div class="row container">
-        <div class="col s2"></div>
-        <button class="waves-effect waves-light btn col s3 pink darken-1 white-text" type="submit" onclick="initMap()"> Buscar rota </button> <!-- botao ir de onde está escrito -->
+        <div class="col s1"></div>
+        <button class="waves-effect waves-light btn col s3 pink darken-1 white-text" type="submit" onclick="initMap()" > Buscar rota </button> <!-- botao ir de onde está escrito -->
         <div class="col s2"></div>
         <button class="waves-effect waves-light btn col s3 pink darken-1 white-text" type="submit" onclick="chamarLocalizacaoAtual()"> Usar localização atual <!-- botao ir de onde está o usuário (geolacalização) --></button>
-        <div class="col s2"></div>
+        <div class="col s1"></div>
     </div>
 
     <div id="map" class="container z-depth-4"></div>

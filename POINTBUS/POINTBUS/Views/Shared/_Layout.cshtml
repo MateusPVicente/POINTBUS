@@ -13,7 +13,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
     @*<script src="Scripts/materialize.js"></script>
-      <script src="Scripts/materialize.min.js"></script>*@
+        <script src="Scripts/materialize.min.js"></script>*@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="~/Scripts/modal.js"></script>
@@ -27,15 +27,15 @@
     </script>
 </head>
 <body>
-    <nav class="transparent container" id="menu">
+    <nav class="container transparent" id="menu">
         <div class="nav-wrapper container">
             <a href="/Usuario" class="brand-logo"><img src="~/img/logo.png" class="responsive-img valign-wrappe"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/Usuario">HOME</a></li>
-                <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
                 @if (ViewBag.Usuario != null)
                 {
+                    <li><a href="/Usuario">HOME</a></li>
+                    <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
                     <li class="deep-purple" style="color: white; text-align: center"><a class='dropdown-trigger' href="#" data-target='dropdown2'>@ViewBag.Usuario.Nome</a></li>
                 }
             </ul>
@@ -43,10 +43,10 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="/Usuario">HOME</a></li>
-        <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
         @if (ViewBag.Usuario != null)
         {
+            <li><a href="/Usuario">HOME</a></li>
+            <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
             <li class="deep-purple" style="color: white;"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
         }
     </ul>
@@ -64,13 +64,15 @@
         @RenderBody()
     </div>
     <footer class="page-footer light-blue darken-4 accent-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Já decidiu pra onde vai?</h5>
-                        <p class="grey-text text-lighten-4">Você pode selecionar seu destino e ainda economizar tempo e dinheiro com uma viagem de ônibus.</p>
-                        <p class="grey-text text-lighten-4">Além disso, você diminui significativamente a poluição diária emitida no planeta.</p>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Já decidiu pra onde vai?</h5>
+                    <p class="grey-text text-lighten-4">Você pode selecionar seu destino e ainda economizar tempo e dinheiro com uma viagem de ônibus.</p>
+                    <p class="grey-text text-lighten-4">Além disso, você diminui significativamente a poluição diária emitida no planeta.</p>
+                </div>
+                @if (ViewBag.Usuario != null)
+                {
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Acesse</h5>
                         <ul>
@@ -78,14 +80,15 @@
                             <li><a class="grey-text text-lighten-3" href="/Pesquisa/Index">Pesquisa</a></li>
                         </ul>
                     </div>
-                </div>
+                }
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2019 Copyright Text
-                </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright Text
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 
 <script type="text/javascript" src="~/Scripts/mapa.js"></script>

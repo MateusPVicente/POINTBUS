@@ -7,8 +7,11 @@
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-pareto.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+
 <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
 <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="~/Content/pesquisa.css" />
+
 <div class="row" style="margin-top: 130px">
     <form action="/Pesquisa/Adicionar" method="post" class="container col s12 m4 l4">
         <p>
@@ -17,11 +20,11 @@
         <p>
             <label>
                 <input class="with-gap" type="radio" value="1" name="p.Qtd1" />
-                <span>Sim</span>
+                <span class="white-text">Sim</span>
             </label>
             <label>
-                <input class="with-gap" name="p.Qtd1" type="radio" value="0" checked />
-                <span>Não</span>
+                <input class="with-gap black" name="p.Qtd1" type="radio" value="0" checked />
+                <span class="white-text">Não</span>
             </label>
         </p>
         <p>
@@ -30,11 +33,11 @@
         <p>
             <label>
                 <input class="with-gap" name="p.Qtd2" type="radio" value="0" />
-                <span>Sim</span>
+                <span class="white-text">Sim</span>
             </label>
             <label>
                 <input class="with-gap" name="p.Qtd2" type="radio" value="1" checked />
-                <span>Não</span>
+                <span class="white-text">Não</span>
             </label>
         </p>
         <p>
@@ -43,11 +46,11 @@
         <p>
             <label>
                 <input class="with-gap" name="p.Qtd3" type="radio" value="1" />
-                <span>Sim</span>
+                <span class="white-text">Sim</span>
             </label>
             <label>
                 <input class="with-gap" name="p.Qtd3" type="radio" value="0" checked />
-                <span>Não</span>
+                <span class="white-text">Não</span>
             </label>
         </p>
         <p>
@@ -56,11 +59,11 @@
         <p>
             <label>
                 <input class="with-gap" name="p.Qtd4" type="radio" value="0" />
-                <span>Sim</span>
+                <span class="white-text">Sim</span>
             </label>
             <label>
                 <input class="with-gap" name="p.Qtd4" type="radio" value="1" checked />
-                <span>Não</span>
+                <span class="white-text">Não</span>
             </label>
         </p>
         <p>
@@ -69,11 +72,11 @@
         <p>
             <label>
                 <input class="with-gap" name="p.Qtd5" type="radio" value="0" />
-                <span>Sim</span>
+                <span class="white-text">Sim</span>
             </label>
             <label>
                 <input class="with-gap" name="p.Qtd5" type="radio" value="1" checked />
-                <span>Não</span>
+                <span class="white-text">Não</span>
             </label>
         </p>
         <p>
@@ -82,15 +85,15 @@
         <p>
             <label>
                 <input class="with-gap" name="p.Qtd6" type="radio" value="1" />
-                <span>Sim</span>
+                <span class="white-text">Sim</span>
             </label>
             <label>
                 <input class="with-gap" name="p.Qtd6" type="radio" value="0" checked />
-                <span>Não</span>
+                <span class="white-text">Não</span>
             </label>
         </p>
 
-        <button class="btn waves-effect waves-light" type="submit">
+        <button class="btn waves-effect waves-light deep-purple" type="submit">
             Enviar Pesquisa
             <i class="material-icons right">send</i>
         </button>
@@ -132,7 +135,7 @@
             var column = chart.getSeriesAt(0);
             column.fill(function ()
             {
-                return '#e60073';
+                return '#7e57c2';
             });
             column.stroke(function ()
             {
@@ -150,7 +153,7 @@
                 .format('{%CF}%');
             line.tooltip().format('Frequência acumulada: {%CF}% \n Frequência relativa: {%RF}%');
 
-            chart.getSeries(1).normal().stroke("#b82e8a", 2, "round");
+            chart.getSeries(1).normal().stroke("#673ab7", 2, "round");
 
             chart.crosshair()
                 .enabled(true)

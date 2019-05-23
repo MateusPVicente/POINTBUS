@@ -15,6 +15,7 @@ namespace POINTBUS.Controllers
         {
             PesquisaDAO dao = new PesquisaDAO();
             ViewBag.Pesquisa = dao.Busca();
+            ViewBag.Usuario = Session["usuarioLogado"];
             return View();
         }
 
