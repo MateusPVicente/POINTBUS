@@ -75,6 +75,12 @@ function definirRota(origin, destination, service, display) {
             display.setDirections(response);
             document.getElementById('b').classList.remove("pulse");
         } else {
+            if (status == "NOT_FOUND") {
+                status = "Endereço inválido";
+                document.getElementById("origem").value = "";
+                document.getElementById("destino").value = "";
+            }
+
             alert('Não foi possível exibir rotas devido a: ' + status);
         }
     });
