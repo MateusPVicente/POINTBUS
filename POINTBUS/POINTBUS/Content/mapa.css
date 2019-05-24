@@ -16,7 +16,7 @@
     padding-left: 10px;
     background-color: #d81b60;
     padding: 2em;
-    color: white; /* mudar a cor da letra do painel*/
+    /*color: white;*/ /* mudar a cor da letra do painel*/
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -56,7 +56,7 @@ adp-substep b {
     float: right;
     width: 100%;
     height: auto;
-    color: white;
+    /*color: white;*/
 }
 
 .panel {

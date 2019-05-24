@@ -73,6 +73,7 @@ function definirRota(origin, destination, service, display) {
     }, function (response, status) {
         if (status === 'OK') {
             display.setDirections(response);
+            document.getElementById('b').classList.remove("pulse");
         } else {
             alert('Não foi possível exibir rotas devido a: ' + status);
         }
@@ -89,18 +90,15 @@ function chamarLocalizacaoAtual() {
                 lng: position.coords.longitude
             };
             document.getElementById('origem').value = atual.lat + "," + atual.lng;
-            initMap();
+            document.getElementById('b').classList.add("pulse");
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
         });
     }
-
     else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
-    initMap();
 }
 
 function computarDistanciaTotal(result) {
