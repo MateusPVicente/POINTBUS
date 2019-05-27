@@ -42,14 +42,14 @@
         </div>
     </nav>
 
-    <ul class="sidenav" id="mobile-demo">
-        @if (ViewBag.Usuario != null)
-        {
+    @if (ViewBag.Usuario != null)
+    {
+        <ul class="sidenav" id="mobile-demo">
             <li><a href="/Usuario">HOME</a></li>
             <li><a href="/Usuario/Mapa">PRA ONDE VAI?</a></li>
             <li class="deep-purple" style="color: white;"><a class='dropdown-trigger' href="#" data-target='dropdown1'>@ViewBag.Usuario.Nome</a></li>
-        }
-    </ul>
+        </ul>
+    }
     <ul id='dropdown1' class='dropdown-content'>
         <li><a href="#">CANCELAR</a></li>
         <li class="divider" tabindex="-1"></li>
