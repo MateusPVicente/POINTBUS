@@ -41,7 +41,4 @@
 
     <div class="col l1"></div>
     </div>
-
-    <h3 id="lbCad" class="center text-darken-2">BASTIDORES</h3>
-
 </asp:Content>
